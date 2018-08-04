@@ -1,0 +1,18 @@
+include ../blocks.project/includes
+
+doctype html
+html(lang='ru')
+  include templates/head/head
+    block head
+      - var pageTitle = 'There is title';
+
+  +page
+
+    +b('header').header.__header
+      //- Content for header
+
+    +b.content.__content
+      //- Other content
+
+    +b('footer').footer.__footer
+      //- Content for footer

@@ -1,0 +1,9 @@
+// Для импорта в файл подключения: @import './app/blocks/iconsvg/iconsvg';
+
+@import '../../scss/vars';     // файл с переменными
+@import '../../scss/png-sprite';    // файл с png-спрайтами
+
+.iconsvg {
+  display: inline-block;
+  fill: currentColor;
+}
