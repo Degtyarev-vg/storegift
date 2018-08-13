@@ -1,0 +1,50 @@
+// Для импорта в файл подключения: @import './app/blocks.project/footer/footer';
+
+@import '../../scss/vars';     // файл с переменными
+@import '../../scss/png-sprite';    // файл с png-спрайтами
+
+
+.footer {
+  background-color: #3b4472;
+  padding: 32px 0 75px;
+  @include respond-to(md) {
+    padding: 20px 0;
+  }
+
+  &_with-catalog {
+    .footer__inner {
+      @include respond-to(xxl) {
+        margin-left: 333px;
+      }
+      @include respond-to(xl) {
+        margin-left: 0;
+      }
+    }
+  }
+
+  &__phone {
+    margin-bottom: 12px;
+  }
+  &__work {
+    font-size: 14px;
+    line-height: 1.2;
+    color: #fff;
+    margin-bottom: 12px;
+    span {
+      font-family: $open_sansbold;
+    }
+  }
+  &__email {
+    display: inline-block;
+    font-family: $open_sansbold;
+    font-size: 14px;
+    line-height: 1.2;
+    text-decoration: none;
+    transition: $transition;
+    color: #eec431;
+    &:hover {
+      color: $accentColor;
+    }
+  }
+
+}

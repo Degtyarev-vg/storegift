@@ -1,0 +1,42 @@
+// Для импорта в файл подключения: @import './app/blocks.project/button-number/button-number';
+
+@import '../../scss/vars';     // файл с переменными
+@import '../../scss/png-sprite';    // файл с png-спрайтами
+
+
+.button-number {
+  display: inline-block;
+  font-family: $officinaserifboldcregular;
+  font-size: 0;
+  line-height: 1;
+  color: #fff;
+  width: 184px;
+
+  &_active {
+    .button-number__number {
+      background-color: #eec431;
+    }
+  }
+
+  &__text, &__number {
+    background-color: $accentColor;
+    display: inline-block;
+    font-size: 18px;
+    transition: $transition;
+    text-decoration: none;
+  }
+  &__text {
+    padding: 15px 12px;
+    width: 134px;
+    &:hover {
+      background-color: #3b4472;
+      box-shadow: 0 0 9px 0 rgba(59, 68, 114, 0.52);
+    }
+  }
+  &__number {
+    padding: 15px 5px;
+    text-align: center;
+    margin-left: 2px;
+    width: 48px;
+  }
+}

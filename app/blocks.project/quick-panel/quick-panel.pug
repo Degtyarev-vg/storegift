@@ -1,0 +1,23 @@
+mixin quick-panel()
+  +b.quick-panel&attributes(attributes)
+    +e.inner
+      .grid
+        +e.content
+          +e.left
+            +search._quick
+          +e.right
+            +e.item
+              +e('a')(href='#').button._compared
+                +e('span').text В сравнении
+                +e('span').number 0
+            +e.item
+              +e('a')(href='#').button._watched._active
+                +e('span').text Вы смотрели
+                +e('span').number 12
+              +watched._bottom
+            +e.item
+              +e('a')(href='#').button._basket._active
+                +e('span').text Корзина
+                +e('span').number 5
+                +e('span').price 5 690 руб.
+

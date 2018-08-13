@@ -1,0 +1,11 @@
+// Для импорта в файл подключения: @import './app/blocks.project/logo/logo';
+
+@import '../../scss/vars';     // файл с переменными
+@import '../../scss/png-sprite';    // файл с png-спрайтами
+
+
+.logo {
+  display: inline-block;
+  font-size: 0;
+  max-width: 100%;
+}

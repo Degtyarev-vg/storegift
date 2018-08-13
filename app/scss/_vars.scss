@@ -1,25 +1,33 @@
-$RobotoRegular: "RobotoRegular", "Helvetica", "Tahoma", sans-serif;
-$RobotoBold: "RobotoBold", "Helvetica", "Tahoma", sans-serif;
+$officinaserifboldcregular: 'officinaserifboldcregular', 'Helvetica', 'Tahoma', sans-serif;
+$officinaserifbookcitalic: 'officinaserifbookcitalic', 'Helvetica', 'Tahoma', sans-serif;
+$officinaserifbookoscregular: 'officinaserifbookoscregular', 'Helvetica', 'Tahoma', sans-serif;
+$officinaserifextraboldsccRg: 'officinaserifextraboldsccRg', 'Helvetica', 'Tahoma', sans-serif;
+$open_sansregular: 'open_sansregular', 'Helvetica', 'Tahoma', sans-serif;
+$open_sansbold: 'open_sansbold', 'Helvetica', 'Tahoma', sans-serif;
+$open_sanssemibold: 'open_sanssemibold', 'Helvetica', 'Tahoma', sans-serif;
 
-$default-font: $RobotoRegular;
+$default-font: $open_sansregular;
 
 $transition: all ease .3s;
 
 $mainColor: #fff;
-$accentColor: #000;
+$accentColor: #c69c6d;
 
 // Breakpoints
-$grid-max-width: 1140px;
+$grid-max-width: 1230px;
 
 $grid-breakpoints:
-  xl 1199.9px 960px,
+  xl 1200.9px 960px,
   lg 991.9px 720px,
   md 767.9px 540px,
   sm 575.9px 100%;
 
 $breakpoints: (
-  xl: 1199.9px,
+  xxl: 1920.9px,
+  stran: 1563.9px,
+  xl: 1200.9px,
   lg: 991.9px,
   md: 767.9px,
-  sm: 575.9px
+  sm: 575.9px,
+  esm: 480.9px
 );

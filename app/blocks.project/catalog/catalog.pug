@@ -1,0 +1,33 @@
+mixin catalog()
+  +b.catalog&attributes(attributes)
+    +e('button').close
+    +e.wrapper
+      +e.inner
+        +e('h3').heading Каталог
+        +e('a')(href='#').custom-item._discounts Скидки и акции
+        +e('ul').list
+          - let i = 1;
+          each item in catalog
+            if item.subitem
+              +e('li')(class='item' + ((i === 2) ? '_active' : '' ))
+                +e('span').open-close
+                +e('a')(href='#').link !{item.name}
+                +e('ul').submenu
+                  if item.submenu
+                    +e('li').submenu-item
+                      +e('span').open-close
+                      +e('a')(href='#').submenu-link !{item.submenu.name}
+                      +e('ul').submenu
+                        each subMenu2link in item.submenu.items
+                          +e('li').submenu-item
+                            +e('a')(href='#').submenu-link !{subMenu2link}
+                  - let j = 1;
+                  each subMenu in item.subitem
+                    +e('li')(class='submenu-item'+ ((i === 2 && j === 1) ? '_active' : '' ))
+                      +e('a')(href='#').submenu-link !{subMenu}
+                    - j++;
+            else
+              +e('li').item
+                +e('a')(href='#').link !{item.name}
+            - i++;
+        +e('a')(href='#').full Полный каталог

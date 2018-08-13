@@ -1,0 +1,7 @@
+mixin payments()
+  +b.payments&attributes(attributes)
+    p Мы принимаем к оплате:
+    ul
+      each item in payments
+        li
+          img(src=item.logo alt=item.name)

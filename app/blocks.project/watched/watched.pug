@@ -1,0 +1,13 @@
+mixin watched()
+  +b.watched&attributes(attributes)
+    each item in watchedList
+      +e.item
+        +e.img-container
+          img(src=item.img alt=item.name)
+        +e('a')(href='#').text-container
+          +e('p').name !{item.name}
+          +e('p').description !{item.description}
+        +e.price-container
+          +e.price !{item.price}
+        +e.delete-container
+          +e('a')(href='#').delete

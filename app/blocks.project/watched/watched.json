@@ -1,0 +1,36 @@
+{
+  "watchedList" : {
+
+    "item1" : {
+      "img" : "img/watched/1.png",
+      "name" : "Часы настенные",
+      "description" : "56*56*3 см, D(циферблата)=25 см.",
+      "price" : "1 800"
+    },
+    "item2" : {
+      "img" : "img/watched/2.png",
+      "name" : "Часы настенные",
+      "description" : "33*33*4,5 см, D(циферблата)=10 см.",
+      "price" : "1 800"
+    },
+    "item3" : {
+      "img" : "img/watched/3.png",
+      "name" : "Часы настенные кварцевые \"Swiss Home\"",
+      "description" : "50*50*4 см, D(циферблата) =20 см. цвет:серебро.",
+      "price" : "1 900"
+    },
+    "item4" : {
+      "img" : "img/watched/4.png",
+      "name" : "Часы настенные",
+      "description" : "25*25*4 см, D(циферблата)=20 см.",
+      "price" : "1 900"
+    },
+    "item5" : {
+      "img" : "img/watched/5.png",
+      "name" : "Часы настенные",
+      "description" : "56*56*3 см, D(циферблата)=25 см.",
+      "price" : "1 800"
+    }
+
+  }
+}

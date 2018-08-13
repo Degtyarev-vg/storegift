@@ -1,0 +1,28 @@
+// Для импорта в файл подключения: @import './app/blocks.project/payments/payments';
+
+@import '../../scss/vars';     // файл с переменными
+@import '../../scss/png-sprite';    // файл с png-спрайтами
+
+
+.payments {
+
+  p {
+    font-size: 14px;
+    line-height: 1.2;
+    color: #fff;
+    margin-bottom: 10px;
+  }
+
+  ul {
+    display: flex;
+    align-items: center;
+  }
+
+  li {
+    margin-right: 25px;
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
+
+}

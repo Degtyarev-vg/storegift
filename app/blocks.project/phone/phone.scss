@@ -1,0 +1,46 @@
+// Для импорта в файл подключения: @import './app/blocks.project/phone/phone';
+
+@import '../../scss/vars';     // файл с переменными
+@import '../../scss/png-sprite';    // файл с png-спрайтами
+
+
+.phone {
+  display: inline-block;
+  font-family: $open_sansbold;
+  font-size: 14px;
+  line-height: 1.2;
+  text-decoration: none;
+  transition: $transition;
+  position: relative;
+  color: #eec431;
+  span {
+    display: inline-block;
+    font-family: $default-font;
+    color: #fff;
+  }
+  &:hover {
+    color: $accentColor;
+  }
+
+  &_footer {
+    color: $accentColor;
+    &:hover {
+      color: #eec431;
+    }
+  }
+
+  &_icon-phone {
+    padding-left: 25px;
+    &:before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      height: 15px;
+      width: 14px;
+      background: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20height%3D%2215%22%20width%3D%2214%22%20clip-rule%3D%22evenodd%22%20fill-rule%3D%22evenodd%22%20image-rendering%3D%22optimizeQuality%22%20shape-rendering%3D%22geometricPrecision%22%20text-rendering%3D%22geometricPrecision%22%3E%3Cpath%20d%3D%22M9.859%2010.122c-.467.432-.888.865-1.356%201.297-2.243-.817-4.58-3.361-5.188-5.714.467-.432.935-.865%201.356-1.297.046.048-.655-3.649-.655-3.649C3.128-.921.604.471.136%202.199c-1.308%204.466%207.105%2013.733%2011.546%2012.725%201.683-.384%203.225-2.881%201.683-3.89%200%200-3.553-.96-3.506-.912z%22%20fill%3D%22%23fff%22%2F%3E%3C%2Fsvg%3E') center no-repeat;
+      background-size: contain;
+    }
+  }
+}

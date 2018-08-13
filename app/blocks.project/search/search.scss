@@ -1,0 +1,59 @@
+// Для импорта в файл подключения: @import './app/blocks.project/search/search';
+
+@import '../../scss/vars';     // файл с переменными
+@import '../../scss/png-sprite';    // файл с png-спрайтами
+
+
+.search {
+  position: relative;
+
+  input {
+    background-color: #fff;
+    display: block;
+    color: #000;
+    font-size: 18px;
+    line-height: 1;
+    width: 100%;
+    &:focus {
+      outline: 0;
+      box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(198, 156, 109, 0.6);
+    }
+  }
+
+  button {
+    background-color: transparent;
+    background: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20height%3D%2224%22%20width%3D%2225%22%3E%3Cpath%20d%3D%22M22.557%2014.165a8.251%208.264%200%200%200%200-11.738%208.368%208.38%200%200%200-11.779%200%208.093%208.104%200%200%200-1.259%2010.017.343.343%200%200%201-.05.417C8.41%2013.919.747%2020.653.747%2020.653a1.92%201.923%200%200%200-.29%202.768l.12.13a1.958%201.961%200%200%200%202.788-.3s7.653-6.727%208.712-7.784a.362.362%200%200%201%20.43-.057%208.192%208.204%200%200%200%2010.05-1.245zm-10.24-1.532a6.094%206.103%200%200%201%200-8.673%206.181%206.19%200%200%201%208.702%200%206.094%206.103%200%200%201%200%208.673%206.181%206.19%200%200%201-8.702%200z%22%20fill%3D%22%23c69c6d%22%20fill-rule%3D%22evenodd%22%2F%3E%3C%2Fsvg%3E') center no-repeat;
+    background-size: contain !important;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: $transition;
+    &:hover {
+      background: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20height%3D%2224%22%20width%3D%2225%22%3E%3Cpath%20d%3D%22M22.557%2014.165a8.251%208.264%200%200%200%200-11.738%208.368%208.38%200%200%200-11.779%200%208.093%208.104%200%200%200-1.259%2010.017.343.343%200%200%201-.05.417C8.41%2013.919.747%2020.653.747%2020.653a1.92%201.923%200%200%200-.29%202.768l.12.13a1.958%201.961%200%200%200%202.788-.3s7.653-6.727%208.712-7.784a.362.362%200%200%201%20.43-.057%208.192%208.204%200%200%200%2010.05-1.245zm-10.24-1.532a6.094%206.103%200%200%201%200-8.673%206.181%206.19%200%200%201%208.702%200%206.094%206.103%200%200%201%200%208.673%206.181%206.19%200%200%201-8.702%200z%22%20fill%3D%22%233b4472%22%20fill-rule%3D%22evenodd%22%2F%3E%3C%2Fsvg%3E') center no-repeat;
+      background-size: contain !important;
+    }
+  }
+
+  &_header {
+    input {
+      border: 1px solid #eec431;
+      padding: 12px 45px 12px 15px;
+    }
+    button {
+      right: 12px;
+      height: 24px;
+      width: 25px;
+    }
+  }
+
+  &_quick {
+    input {
+      padding: 6px 35px 6px 10px;
+    }
+    button {
+      right: 6px;
+      height: 20px;
+      width: 21px;
+    }
+  }
+}

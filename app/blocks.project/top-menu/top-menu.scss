@@ -1,0 +1,104 @@
+// Для импорта в файл подключения: @import './app/blocks.project/top-menu/top-menu';
+
+@import '../../scss/vars';     // файл с переменными
+@import '../../scss/png-sprite';    // файл с png-спрайтами
+
+
+.top-menu {
+
+  &__hamburger {
+    display: none;
+    @include respond-to(lg) {
+      display: inline-block;
+    }
+  }
+
+  ul {
+    @include respond-to(lg) {
+      border-radius: 10px;
+      box-shadow: 0 0 18px 0 rgba(0, 0, 0, .2);
+      display: none;
+      position: absolute;
+      top: 50px;
+      left: 50%;
+      width: 100%;
+      z-index: 5;
+      transform: translateX(-50%);
+      max-width: 690px;
+      overflow: hidden;
+    }
+    @media (min-width: 992px) {
+      display: block !important;
+    }
+    @include respond-to(md) {
+      max-width: 510px;
+    }
+    @include respond-to(sm) {
+      max-width: calc(100% - 30px);
+    }
+  }
+
+  li {
+    display: inline-block;
+    position: relative;
+    margin-right: 45px;
+    @include respond-to(lg) {
+      background-color: $accentColor;
+      display: block;
+      margin-right: 0;
+      border-bottom: 1px solid rgba(255, 255, 255, .3);
+      overflow: hidden;
+    }
+    &:before {
+      background-color: $accentColor;
+      content: '';
+      position: absolute;
+      top: 50%;
+      right: -25px;
+      height: 4px;
+      width: 4px;
+      transform: translateY(-50%);
+      @include respond-to(lg) {
+        display: none;
+      }
+    }
+    &:last-of-type {
+      margin-right: 0;
+      &:before {
+        display: none;
+      }
+      @include respond-to(lg) {
+        border-bottom: 0;
+      }
+    }
+    &.active {
+      a {
+        color: $accentColor;
+        @include respond-to(lg) {
+          background-color: #fff;
+          color: #000;
+        }
+      }
+    }
+  }
+
+  a {
+    display: inline-block;
+    font-size: 14px;
+    line-height: 1.2;
+    color: #fff;
+    text-decoration: none;
+    transition: $transition;
+    @include respond-to(lg) {
+      display: block;
+      padding: 10px 15px;
+    }
+    &:hover {
+      color: $accentColor;
+      @include respond-to(lg) {
+        color: #fff;
+      }
+    }
+  }
+
+}

@@ -1,0 +1,28 @@
+{
+  "payments" : {
+    "item1" : {
+      "logo" : "img/payments/visa.svg",
+      "name" : "Visa"
+    },
+    "item2" : {
+      "logo" : "img/payments/mastercard.svg",
+      "name" : "Mastercard"
+    },
+    "item3" : {
+      "logo" : "img/payments/sberbank.svg",
+      "name" : "Сбербанк"
+    },
+    "item4" : {
+      "logo" : "img/payments/qiwi.svg",
+      "name" : "Qiwi"
+    },
+    "item5" : {
+      "logo" : "img/payments/webmoney.svg",
+      "name" : "Webmoney"
+    },
+    "item6" : {
+      "logo" : "img/payments/yandex-money.svg",
+      "name" : "Яндекс.Деньги"
+    }
+  }
+}

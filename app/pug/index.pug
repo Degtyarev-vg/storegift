@@ -4,15 +4,23 @@ doctype html
 html(lang='ru')
   include templates/head/head
     block head
-      - var pageTitle = 'There is title';
+      - var pageTitle = 'Store Gift - магазин хороших подарков';
 
   +page
 
-    +b('header').header.__header
-      //- Content for header
+    +header(true, true)._with-catalog.__header
 
-    +b.content.__content
-      //- Other content
 
-    +b('footer').footer.__footer
-      //- Content for footer
+    +b.content._with-catalog.__content
+
+      +catalog.__catalog
+
+      +e.inner
+        .grid
+          +b('button').catalog-btn Каталог
+          h1 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+
+
+    +footer(true, false)._with-catalog.__footer
+
+    +quick-panel._with-catalog

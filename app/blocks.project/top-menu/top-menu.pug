@@ -1,0 +1,9 @@
+mixin top-menu()
+  +b('nav').top-menu&attributes(attributes)
+    +hamburger.__hamburger
+    ul
+      - let i = 1;
+      each item in topMenu
+        li(class= '' + (i === 1 ? 'active' : ''))
+          a(href=item.link) !{item.name}
+        - i++;

@@ -1,15 +1,76 @@
 @font-face {
-  font-family: "RobotoRegular";
-  src: url("../fonts/RobotoRegular/RobotoRegular.woff2") format("woff2"),
-       url("../fonts/RobotoRegular/RobotoRegular.woff") format("woff");
+  font-family: 'officinaserifboldcregular';
+  src: url('../fonts/officinaserifboldc/officinaserifboldc.eot');
+  src: url('../fonts/officinaserifboldc/officinaserifboldc.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/officinaserifboldc/officinaserifboldc.woff2') format('woff2'),
+  url('../fonts/officinaserifboldc/officinaserifboldc.woff') format('woff'),
+  url('../fonts/officinaserifboldc/officinaserifboldc.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "RobotoBold";
-  src: url("../fonts/RobotoBold/RobotoBold.woff2") format("woff2"),
-       url("../fonts/RobotoBold/RobotoBold.woff") format("woff");
+  font-family: 'officinaserifbookcitalic';
+  src: url('../fonts/officinaserifbookc-italic/officinaserifbookc-italic.eot');
+  src: url('../fonts/officinaserifbookc-italic/officinaserifbookc-italic.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/officinaserifbookc-italic/officinaserifbookc-italic.woff2') format('woff2'),
+  url('../fonts/officinaserifbookc-italic/officinaserifbookc-italic.woff') format('woff'),
+  url('../fonts/officinaserifbookc-italic/officinaserifbookc-italic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'officinaserifbookoscregular';
+  src: url('../fonts/officinaserifbookosc/officinaserifbookosc.eot');
+  src: url('../fonts/officinaserifbookosc/officinaserifbookosc.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/officinaserifbookosc/officinaserifbookosc.woff2') format('woff2'),
+  url('../fonts/officinaserifbookosc/officinaserifbookosc.woff') format('woff'),
+  url('../fonts/officinaserifbookosc/officinaserifbookosc.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'officinaserifextraboldsccRg';
+  src: url('../fonts/officinaserifextraboldscc/officinaserifextraboldscc.eot');
+  src: url('../fonts/officinaserifextraboldscc/officinaserifextraboldscc.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/officinaserifextraboldscc/officinaserifextraboldscc.woff2') format('woff2'),
+  url('../fonts/officinaserifextraboldscc/officinaserifextraboldscc.woff') format('woff'),
+  url('../fonts/officinaserifextraboldscc/officinaserifextraboldscc.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'open_sansregular';
+  src: url('../fonts/open-sans/open-sans.eot');
+  src: url('../fonts/open-sans/open-sans.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/open-sans/open-sans.woff2') format('woff2'),
+  url('../fonts/open-sans/open-sans.woff') format('woff'),
+  url('../fonts/open-sans/open-sans.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'open_sansbold';
+  src: url('../fonts/opensans-bold/opensans-bold.eot');
+  src: url('../fonts/opensans-bold/opensans-bold.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/opensans-bold/opensans-bold.woff2') format('woff2'),
+  url('../fonts/opensans-bold/opensans-bold.woff') format('woff'),
+  url('../fonts/opensans-bold/opensans-bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'open_sanssemibold';
+  src: url('../fonts/opensans-semibold/opensans-semibold.eot');
+  src: url('../fonts/opensans-semibold/opensans-semibold.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/opensans-semibold/opensans-semibold.woff2') format('woff2'),
+  url('../fonts/opensans-semibold/opensans-semibold.woff') format('woff'),
+  url('../fonts/opensans-semibold/opensans-semibold.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }

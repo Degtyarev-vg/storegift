@@ -1,0 +1,52 @@
+// Для импорта в файл подключения: @import './app/blocks.project/footer-menu/footer-menu';
+
+@import '../../scss/vars';     // файл с переменными
+@import '../../scss/png-sprite';    // файл с png-спрайтами
+
+
+.footer-menu {
+
+  ul {
+
+  }
+
+  li {
+    display: inline-block;
+    position: relative;
+    margin-right: 45px;
+    &:before {
+      background-color: $accentColor;
+      content: '';
+      position: absolute;
+      top: 50%;
+      right: -25px;
+      height: 4px;
+      width: 4px;
+      transform: translateY(-50%);
+    }
+    &:last-of-type {
+      margin-right: 0;
+      &:before {
+        display: none;
+      }
+    }
+    &.active {
+      a {
+        color: #fff;
+      }
+    }
+  }
+
+  a {
+    display: inline-block;
+    font-size: 14px;
+    line-height: 1.2;
+    color: #eec431;
+    text-decoration: none;
+    transition: $transition;
+    &:hover {
+      color: #fff;
+    }
+  }
+
+}

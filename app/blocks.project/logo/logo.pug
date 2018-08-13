@@ -1,0 +1,13 @@
+mixin logo(isMain, isHeader)
+  if isMain
+    +b.logo&attributes(attributes)
+      if isHeader
+        img(src='img/logo_header.svg' alt='Store Gift')
+      else
+        img(src='img/logo_footer.svg' alt='Store Gift')
+  else
+    +b('a')(href='/').logo&attributes(attributes)
+      if isHeader
+        img(src='img/logo_header.svg' alt='Store Gift')
+      else
+        img(src='img/logo_footer.svg' alt='Store Gift')

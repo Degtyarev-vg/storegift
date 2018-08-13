@@ -1,0 +1,8 @@
+mixin footer-menu()
+  +b('nav').footer-menu&attributes(attributes)
+    ul
+      - let i = 1;
+      each item in topMenu
+        li(class= '' + (i === 1 ? 'active' : ''))
+          a(href=item.link) !{item.name}
+        - i++;

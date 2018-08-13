@@ -1,0 +1,49 @@
+// Для импорта в файл подключения: @import './app/blocks.project/content/content';
+
+@import '../../scss/vars';     // файл с переменными
+@import '../../scss/png-sprite';    // файл с png-спрайтами
+
+
+.content {
+  position: relative;
+
+  &_with-catalog {
+    font-size: 0;
+    .content__inner, .content__catalog {
+      display: inline-block;
+      vertical-align: top;
+      @include respond-to(xl) {
+        display: block;
+      }
+    }
+    .content__inner {
+      font-size: 14px;
+      padding-right: 333px;
+      width: calc(100% - 333px);
+      @include respond-to(xxl) {
+        padding-right: 0;
+      }
+      @include respond-to(xl) {
+        width: 100%;
+      }
+    }
+    .content__catalog {
+      @include respond-to(xl) {
+        transition: $transition;
+        position: fixed;
+        top: 0;
+        left: -333px;
+        z-index: 100;
+      }
+      &_open {
+        @include respond-to(xl) {
+          left: 0;
+          .catalog__close {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+
+}

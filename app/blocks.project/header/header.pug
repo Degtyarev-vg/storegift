@@ -1,0 +1,28 @@
+mixin header(isMain, isHeader)
+  +b('header').header&attributes(attributes)
+    +e.top
+      +e.inner
+        .grid
+          +e.menu-container
+            +top-menu
+          +e.phones
+            +b('a')(href='tel:88123095784').phone._icon-phone.__phone <span>СПб</span> 8 (812) 309–57–84
+            br
+            +b('a')(href='tel:84997033126').phone.__phone <span>Мск</span> 8 (499) 703-31-26
+            br
+            +b('a')(href='tel:88005559551').phone.__phone <span>Бесплатный по РФ</span> 8 (800) 555-95-51
+    +e.inner
+      .grid
+        +e.bottom
+          +e.logo-container
+            +logo(isMain, isHeader)
+          +e.search-container
+            +search._header
+          +e.buttons-container
+            +b('a')(href='#').button-number._watched._active.__button-number._watched
+              +e('span').text Вы смотрели
+              +e('span').number 5
+            +b('a')(href='#').button-number.__button-number._basket
+              +e('span').text Корзина
+              +e('span').number 0
+            +watched._top

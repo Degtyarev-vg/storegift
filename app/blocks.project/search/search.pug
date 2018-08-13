@@ -1,0 +1,4 @@
+mixin search()
+  +b('form')(action='#' method='post' autocomplete='off').search&attributes(attributes)
+    input(type='text' maxlength='100')
+    button(type='submit')
