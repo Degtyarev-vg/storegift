@@ -22,6 +22,97 @@
     }
   }
 
+  &__top, &__middle, &__bottom {
+    font-size: 0;
+  }
+  &__middle {
+    margin: 20px 0;
+    @include respond-to(lg) {
+      margin: 30px 0;
+    }
+  }
+
+  &__logo-container, &__menu-container, &__contacts-container {
+    display: inline-block;
+    vertical-align: top;
+  }
+  &__logo-container {
+    width: 305px;
+    @include respond-to(lg) {
+      display: block;
+      text-align: center;
+      margin-bottom: 30px;
+      width: 100%;
+    }
+  }
+  &__menu-container {
+    padding: 0 15px 0 50px;
+    width: calc(100% - 590px);
+    @include respond-to(lg) {
+      padding: 0;
+      width: calc(100% - 285px);
+    }
+    @include respond-to(esm) {
+      margin-bottom: 15px;
+      width: 100%;
+    }
+  }
+  &__contacts-container {
+    text-align: right;
+    width: 285px;
+    @include respond-to(esm) {
+      text-align: center;
+      width: 100%;
+    }
+  }
+
+  &__mobile-apps {
+    margin-top: 30px;
+    @include respond-to(lg) {
+      margin-top: 20px;
+    }
+  }
+
+  &__payment-container, &__socials-container {
+    display: inline-block;
+    vertical-align: top;
+    @include respond-to(lg) {
+      display: block;
+      text-align: center;
+    }
+  }
+  &__payment-container {
+    width: calc(100% - 385px);
+    @include respond-to(lg) {
+      margin-bottom: 25px;
+      width: 100%;
+    }
+  }
+  &__socials-container {
+    text-align: right;
+    width: 385px;
+    @include respond-to(lg) {
+      width: 100%;
+    }
+  }
+
+  &__confidential-container, &__copy-container {
+    display: inline-block;
+    vertical-align: top;
+    width: 50%;
+    @include respond-to(esm) {
+      display: block;
+      text-align: center;
+      width: 100%;
+    }
+  }
+  &__copy-container {
+    text-align: right;
+    @include respond-to(esm) {
+      margin-top: 20px;
+    }
+  }
+
   &__phone {
     margin-bottom: 12px;
   }
@@ -42,6 +133,18 @@
     text-decoration: none;
     transition: $transition;
     color: #eec431;
+    &:hover {
+      color: $accentColor;
+    }
+  }
+
+  &__confidential, &__copy {
+    font-size: 14px;
+    text-decoration: none;
+    transition: $transition;
+    color: #fff;
+  }
+  &__confidential {
     &:hover {
       color: $accentColor;
     }

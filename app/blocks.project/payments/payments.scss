@@ -10,16 +10,35 @@
     font-size: 14px;
     line-height: 1.2;
     color: #fff;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
+    @include respond-to(md) {
+      margin-bottom: 0;
+    }
   }
 
   ul {
     display: flex;
     align-items: center;
+    @include respond-to(lg) {
+      justify-content: space-between;
+    }
+    @include respond-to(md) {
+      flex-wrap: wrap;
+      margin: 0 -15px;
+    }
   }
 
   li {
     margin-right: 25px;
+    @include respond-to(md) {
+      margin-right: 0;
+      margin-top: 20px;
+      padding: 0 15px;
+      width: 33.3333333%;
+    }
+    @include respond-to(esm) {
+      width: 50%;
+    }
     &:last-of-type {
       margin-right: 0;
     }

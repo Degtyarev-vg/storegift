@@ -266,6 +266,68 @@
 			]
 		}
 	},
+	"mainBlocks": {
+		"block1": {
+			"img": "img/main/1.jpg",
+			"text": "Глобус бары"
+		},
+		"block2": {
+			"img": "img/main/2.jpg",
+			"text": "Наборы для пикника"
+		},
+		"block3": {
+			"img": "img/main/3.jpg",
+			"text": "Каминные часы"
+		},
+		"block4": {
+			"img": "img/main/4.jpg",
+			"text": "Консоли"
+		},
+		"block5": {
+			"img": "img/main/5.jpg",
+			"text": "Зеркала"
+		},
+		"block6": {
+			"img": "img/main/6.jpg",
+			"text": "Наборы для барбекю"
+		},
+		"block7": {
+			"img": "img/main/7.jpg",
+			"text": "Модели кораблей и яхт"
+		},
+		"block8": {
+			"img": "img/main/8.jpg",
+			"text": "Штукатулки для ювелирных украшений"
+		},
+		"block9": {
+			"img": "img/main/9.jpg",
+			"text": "Фонтаны"
+		},
+		"block10": {
+			"img": "img/main/10.jpg",
+			"text": "Канделябры"
+		},
+		"block11": {
+			"img": "img/main/11.jpg",
+			"text": "Мечи самурайские"
+		},
+		"block12": {
+			"img": "img/main/12.jpg",
+			"text": "Морская тематика"
+		},
+		"block13": {
+			"img": "img/main/13.jpg",
+			"text": "Родословные книги"
+		},
+		"block14": {
+			"img": "img/main/14.jpg",
+			"text": "Шахматы"
+		},
+		"block15": {
+			"img": "img/main/15.jpg",
+			"text": "Сервизы"
+		}
+	},
 	"payments": {
 		"item1": {
 			"logo": "img/payments/visa.svg",

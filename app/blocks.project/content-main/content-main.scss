@@ -1,0 +1,88 @@
+// Для импорта в файл подключения: @import './app/blocks.project/content-main/content-main';
+
+@import '../../scss/vars';     // файл с переменными
+@import '../../scss/png-sprite';    // файл с png-спрайтами
+
+
+.content-main {
+
+  &__item {
+    &:first-of-type {
+      display: inline-block;
+      height: 389px;
+    }
+    &:last-of-type {
+      display: inline-block;
+      height: 619px;
+    }
+  }
+
+  &__main-text-block {
+    height: 100%;
+  }
+
+  &__block {
+    display: block;
+    height: 185px; /* DELETE */
+    width: 182px; /* DELETE */
+    margin-bottom: 15px; /* DELETE */
+    position: relative;
+    overflow: hidden;
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      transition: $transition;
+      background-color: rgba(#3b4472, .75);
+      opacity: 0;
+    }
+    &:after {
+      border: 1px solid rgba(255, 255, 255, .74);
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      transition-delay: .3s;
+      transition: $transition;
+      height: 0;
+      width: 0;
+      opacity: 0;
+    }
+    &:hover {
+      &:before {
+        opacity: 1;
+      }
+      &:after {
+        height: calc(100% - 12px);
+        width: calc(100% - 12px);
+        opacity: 1;
+      }
+      .content-main__block-text {
+        left: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 1;
+      }
+    }
+  }
+  &__block-text {
+    font-family: $officinaserifbookoscregular;
+    font-size: 30px;
+    line-height: 1.2;
+    color: #fff;
+    text-align: center;
+    transition: $transition;
+    transition-delay: .6s;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    transform: translate(0, -50%);
+    z-index: 1;
+    width: calc(100% - 30px);
+  }
+
+}
