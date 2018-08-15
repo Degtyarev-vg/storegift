@@ -20,6 +20,10 @@
   &_top {
     top: calc(100% + 11px);
     left: 0;
+    @include respond-to(md) {
+      left: auto;
+      right: 0;
+    }
   }
 
   &_bottom {

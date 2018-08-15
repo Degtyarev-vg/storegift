@@ -10,9 +10,15 @@
   font-size: 13px;
   line-height: 1.5;
   padding: 20px 15px;
+  overflow-x: hidden;
+  overflow-y: auto;
 
   &_1 {
+    background: url('../img/bg_main-text-block_1.png') bottom center no-repeat;
     border: 4px solid $accentColor;
+    @include respond-to(xl) {
+      border: 2px solid $accentColor;
+    }
     h2 {
       color: #3b4472;
       &:before {
@@ -22,7 +28,11 @@
   }
 
   &_2 {
+    background: url('../img/bg_main-text-block_2.png') bottom center no-repeat;
     border: 4px solid #3b4472;
+    @include respond-to(xl) {
+      border: 2px solid #3b4472;
+    }
     h2 {
       color: $accentColor;
       &:before {

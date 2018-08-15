@@ -6,8 +6,8 @@
 
 .hamburger {
   background-color: transparent;
-  width: 34px;
-  height: 24px;
+  width: 23px;
+  height: 23px;
   text-decoration: none;
   position: relative;
   z-index: 11;
@@ -25,8 +25,8 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    height: 2px;
-    width: 34px;
+    height: 4.6px;
+    width: 23px;
     transform: translate(-50%, -50%);
     transition: all ease 0.3s;
     backface-visibility: hidden;
@@ -35,8 +35,8 @@
       background-color: #fff;
       position: absolute;
       left: 0;
-      height: 2px;
-      width: 34px;
+      height: 4.6px;
+      width: 23px;
       transform-origin: top left;
       transition: all ease 0.3s;
       backface-visibility: hidden;
@@ -51,14 +51,14 @@
     &_on {
       background-color: transparent;
       &:before {
-        left: 50%;
-        bottom: 0;
-        transform: rotate(45deg) translateX(-50%);
+        left: 4px;
+        bottom: 8px;
+        transform: rotate(45deg);
       }
       &:after {
-        left: 50%;
-        top: 0;
-        transform: rotate(-45deg) translate(-50%);
+        left: 1px;
+        top: 9px;
+        transform: rotate(-45deg);
       }
     }
   }

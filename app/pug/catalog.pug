@@ -4,11 +4,11 @@ doctype html
 html(lang='ru')
   include templates/head/head
     block head
-      - var pageTitle = 'Store Gift - магазин хороших подарков';
+      - var pageTitle = 'Ванная комната | Store Gift - магазин хороших подарков';
 
   +page._with-catalog
 
-    +header(true, true).__header
+    +header(false, true).__header
 
 
     +b.content._with-catalog.__content
@@ -20,9 +20,9 @@ html(lang='ru')
           +b('button').catalog-btn
             +e.text Каталог
 
-          +content-main
+          //-+content-main
 
 
-    +footer(true, false).__footer
+    +footer(false, false).__footer
 
     +quick-panel

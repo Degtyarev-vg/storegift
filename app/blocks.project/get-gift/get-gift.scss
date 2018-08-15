@@ -1,0 +1,50 @@
+// Для импорта в файл подключения: @import './app/blocks.project/get-gift/get-gift';
+
+@import '../../scss/vars';     // файл с переменными
+@import '../../scss/png-sprite';    // файл с png-спрайтами
+
+
+.get-gift {
+  background: #ebebeb url('../img/bg_pickup_gift.jpg') top right no-repeat;
+  background-size: contain;
+  font-family: $officinaserifbookcitalic;
+  font-size: 17px;
+  line-height: 1.5;
+  text-align: center;
+  padding: 20px 15px;
+  margin: 20px 0;
+  color: #494949;
+
+  &__button {
+    background-color: transparent;
+    border: 3px solid $accentColor;
+    font-family: $officinaserifextraboldsccRg;
+    font-size: 18px;
+    line-height: 1;
+    color: $accentColor;
+    display: inline-block;
+    text-decoration: none;
+    transition: $transition;
+    padding: 12px 53px;
+    position: relative;
+    margin-top: 36px;
+    @include respond-to(esm) {
+      padding: 12px 30px;
+    }
+    &:before {
+      content: '';
+      position: absolute;
+      top: -25px;
+      left: 50%;
+      transform: translateX(-50%);
+      height: 5px;
+      width: 39px;
+      background-color: $accentColor;
+    }
+    &:hover {
+      background-color: #3b4472;
+      border-color: #3b4472;
+      color: #fff;
+    }
+  }
+}

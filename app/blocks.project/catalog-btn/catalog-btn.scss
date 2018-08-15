@@ -6,6 +6,74 @@
 
 .catalog-btn {
   display: none;
+  background-color: $accentColor;
+  font-family: $officinaserifboldcregular;
+  font-size: 20px;
+  color: #fff;
+  transition: $transition;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 48px;
+  z-index: 11;
+  @include respond-to(esm) {
+    height: 48px;
+    width: 100%;
+  }
+  &:before, &:after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    @include respond-to(esm) {
+      left: auto;
+      transform: translateX(0);
+    }
+  }
+  &:before {
+    background: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20height%3D%2223%22%20width%3D%2223%22%3E%3Cpath%20d%3D%22M0%200h10v10H0zm13%200h10v10H13zM0%2013h10v10H0zm13%200h10v10H13z%22%20fill%3D%22%23fff%22%20fill-rule%3D%22evenodd%22%2F%3E%3C%2Fsvg%3E') center no-repeat;
+    background-size: contain;
+    top: 14px;
+    height: 23px;
+    width: 23px;
+    @include respond-to(esm) {
+      left: 15px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+  &:after {
+    background: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20height%3D%2279%22%20width%3D%2214%22%3E%3Cpath%20d%3D%22M6.375%2078.733a.865.865%200%200%200%201.249%200l6.117-6.32a.94.94%200%200%200%200-1.296.86.86%200%200%200-1.248%200l-4.61%204.764V.913a.883.883%200%201%200-1.766%200v74.968l-4.61-4.764a.86.86%200%200%200-1.248%200%20.94.94%200%200%200%200%201.296z%22%20fill%3D%22%23fff%22%20fill-rule%3D%22evenodd%22%2F%3E%3C%2Fsvg%3E') center no-repeat;
+    background-size: contain;
+    top: 142px;
+    height: 79px;
+    width: 14px;
+    @include respond-to(esm) {
+      top: 50%;
+      left: 190px;
+      transform: translateY(-50%) rotate(-90deg);
+    }
+  }
+  &:hover {
+    background-color: #3b4371;
+    @include respond-to(esm) {
+      background-color: $accentColor;
+    }
+  }
+
+  &__text {
+    position: absolute;
+    top: 76px;
+    left: 50%;
+    transform: translateX(-50%) rotate(90deg);
+    @include respond-to(esm) {
+      display: inline-block;
+      left: 63px;
+      top: 50%;
+      transform: translate(0, -50%) rotate(0);
+    }
+  }
   @include respond-to(xl) {
     display: inline-block;
   }

@@ -1,14 +1,66 @@
 mixin content-main()
   +b.content-main&attributes(attributes)
-    +e.item
+    +e.item.__main-text-block-1
       +b.main-text-block._1.__main-text-block
         h2 Добро пожаловать!!!
         p Приветствуем Вас в нашем интернет-магазине предметов интерьера и подарков StoreGift.ru Создавая наш магазин, мы мечтали сделать как можно большее количество людей счастливее и радостнее. Поэтому предлагаем Вам только качественную продукцию  и с радостью поможем подобрать такой товар, который сделает счастливым Вас или того, кому он предназначен. Каждый предмет в нашем магазине оригинален, интересен и подойдет самому неповторимому человеку, потому что мы тщательно отбираем нашу продукцию и предлагаем только лучшие товары.
-    each item in mainBlocks
+
+    +e.float-block-1
       +e.item
-        +e('a')(href='#' style='background:url(' + item.img + ') center no-repeat;background-size:cover').block
-          +e.block-text !{item.text}
-    +e.item
+        +e('a')(href='#' style='background:url(img/main/1.jpg) center no-repeat;background-size:cover').block
+          +e.block-text Глобус бары
+      +e.item
+        +e('a')(href='#' style='background:url(img/main/2.jpg) center no-repeat;background-size:cover').block
+          +e.block-text Наборы для пикника
+      +e.item
+        +e('a')(href='#' style='background:url(img/main/3.jpg) center no-repeat;background-size:cover').block
+          +e.block-text Каминные часы
+      +e.item
+        +e('a')(href='#' style='background:url(img/main/4.jpg) center no-repeat;background-size:cover').block
+          +e.block-text Консоли
+      +e.item
+        +e('a')(href='#' style='background:url(img/main/5.jpg) center no-repeat;background-size:cover').block
+          +e.block-text Зеркала
+      +e.item
+        +e('a')(href='#' style='background:url(img/main/6.jpg) center no-repeat;background-size:cover').block
+          +e.block-text Наборы для барбекю
+
+    +e.float-block-2
+      +e.item
+        +e('a')(href='#' style='background:url(img/main/7.jpg) center no-repeat;background-size:cover').block
+          +e.block-text Модели кораблей и яхт
+      +e.item
+        +e('a')(href='#' style='background:url(img/main/8.jpg) center no-repeat;background-size:cover').block
+          +e.block-text Штукатулки для ювелирных украшений
+      +e.item
+        +e('a')(href='#' style='background:url(img/main/10.jpg) center no-repeat;background-size:cover').block
+          +e.block-text Канделябры
+      +e.item
+        +e('a')(href='#' style='background:url(img/main/11.jpg) center no-repeat;background-size:cover').block
+          +e.block-text Мечи самурайские
+      +e.item
+        +e('a')(href='#' style='background:url(img/main/12.jpg) center no-repeat;background-size:cover').block
+          +e.block-text Морская тематика
+
+    +e.float-block-3
+      +e.item
+        +e('a')(href='#' style='background:url(img/main/9.jpg) center no-repeat;background-size:cover').block
+          +e.block-text Фонтаны
+
+    +e.float-block-4
+      +e.item
+        +e('a')(href='#' style='background:url(img/main/13.jpg) center no-repeat;background-size:cover').block
+          +e.block-text Родословные книги
+      +e.item
+        +e('a')(href='#' style='background:url(img/main/14.jpg) center no-repeat;background-size:cover').block
+          +e.block-text Шахматы
+      +e.item
+        +e('a')(href='#' style='background:url(img/main/15.jpg) center no-repeat;background-size:cover').block
+          +e.block-text Сервизы
+
+
+
+    +e.item.__main-text-block-2
       +b.main-text-block._2.__main-text-block
         h2 Нашим клиентам мы предоставляем:
         ul
@@ -19,3 +71,9 @@ mixin content-main()
           li Скидки постоянным клиентам
           li Внимательное и душевное отношение к каждому клиенту
         p Для вашего удобства у нас на сайте есть простое меню для выбора интересующей Вас рубрики и категории продукта.  С нами легко сделать правильный выбор и просто совершить желанную покупку.
+
+    .clearfix
+
+    +get-gift.__get-gift
+
+    +e('h2').good-luck Желаем Вам удачных и приятных покупок! Ваш Магазин Хороших Подарков StoreGift.ru

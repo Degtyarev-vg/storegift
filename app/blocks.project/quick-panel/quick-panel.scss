@@ -10,12 +10,12 @@
   bottom: 0;
   left: 0;
   width: 100%;
-  z-index: 99;
+  z-index: 101;
   @include respond-to(md) {
     display: none;
   }
 
-  &_with-catalog {
+  /*&_with-catalog {
     .quick-panel__inner {
       @include respond-to(xxl) {
         margin-left: 333px;
@@ -24,7 +24,7 @@
         margin-left: 0;
       }
     }
-  }
+  }*/
 
   &__content {
     font-size: 0;

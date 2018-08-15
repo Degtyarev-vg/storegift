@@ -1,28 +1,27 @@
 mixin footer(isMain, isHeader)
   +b('footer').footer&attributes(attributes)
     +e.inner
-      .grid
-        +e.top
-          +e.logo-container
-            +logo(isMain, isHeader)
-            +mobile-apps.__mobile-apps
-          +e.menu-container
-            +footer-menu.__footer-menu
-          +e.contacts-container
-            +b('a')(href='tel:88123095784').phone._footer.__phone <span>Санкт-Петербург</span> 8 (812) 309–57–84
-            br
-            +b('a')(href='tel:84997033126').phone._footer.__phone <span>Москва</span> 8 (499) 703-31-26
-            br
-            +b('a')(href='tel:88005559551').phone._footer.__phone <span>Бесплатный по РФ</span> 8 (800) 555-95-51
-            +e.work Мы работаем с <span>10:00</span> до <span>19:00</span>
-            +e('a')(href='mailto:info@storegift.ru').email info@storegift.ru
-        +e.middle
-          +e.payment-container
-            +payments.__payments
-          +e.socials-container
-            +socials.__socials
-        +e.bottom
-          +e.confidential-container
-            +e('a')(href='#').confidential Соглашение о конфиденциальности
-          +e.copy-container
-            +e('p').copy &copy; «StoreGift» 2011—2018
+      +e.top
+        +e.logo-container
+          +logo(isMain, isHeader)
+          +mobile-apps.__mobile-apps
+        +e.menu-container
+          +footer-menu.__footer-menu
+        +e.contacts-container
+          +b('a')(href='tel:88123095784').phone._footer.__phone <span>Санкт-Петербург</span> 8 (812) 309–57–84
+          br
+          +b('a')(href='tel:84997033126').phone._footer.__phone <span>Москва</span> 8 (499) 703-31-26
+          br
+          +b('a')(href='tel:88005559551').phone._footer.__phone <span>Бесплатный по РФ</span> 8 (800) 555-95-51
+          +e.work Мы работаем с <span>10:00</span> до <span>19:00</span>
+          +e('a')(href='mailto:info@storegift.ru').email info@storegift.ru
+      +e.middle
+        +e.payment-container
+          +payments.__payments
+        +e.socials-container
+          +socials.__socials
+      +e.bottom
+        +e.confidential-container
+          +e('a')(href='#').confidential Соглашение о конфиденциальности
+        +e.copy-container
+          +e('p').copy &copy; «StoreGift» 2011—2018

@@ -19,6 +19,16 @@
   overflow-x: hidden;
   height: 100vh;
 
+  &_with-catalog {
+    @include respond-to(xl) {
+      padding-left: 48px;
+    }
+    @include respond-to(esm) {
+      padding-left: 0;
+      padding-top: 48px;
+    }
+  }
+
   &:after {
     content: '';
     position: absolute;
@@ -32,6 +42,9 @@
     background-size: contain;
     z-index: -1;
     @include respond-to(stran) {
+      opacity: .2;
+    }
+    @include respond-to(xl) {
       top: 90px;
     }
     @include respond-to(esm) {
