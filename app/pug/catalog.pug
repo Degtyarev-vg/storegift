@@ -70,19 +70,26 @@ html(lang='ru')
                       +e('img')(src=item.img alt=item.name).img
                       if item.quantity
                         +e('span').quantity !{item.quantity}
-                    +e('a')(href='#').name !{item.name}
-                    if item.size
-                      +e('a')(href='#').size !{item.size}
+                    +e.text-container
+                      +e('a')(href='#').name !{item.name}
+                      if item.size
+                        +e.size !{item.size}
                     +e('a')(href='javascript:undefined').comparison К сравнению
-                    +e('a')(href='javascript:undefined').comparison._add В сравнении
+                    //<a class="product__comparison product__comparison_add" href="javascript:undefined">В сравнении</a>
                     +e.bottom
                       +e.price-block
                         +e('span').price !{item.price}
                         if item.oldPrice
+                          br
                           +e('span').old-price !{item.oldPrice}
                       +e('a')(href='#popup-add-basket').basket.popup-with-zoom-anim В корзину
-                    +e('a')(href='#').overlay
+                        +e('span').basket-icon
+                    +e('a')(href='#more').overlay
                       +e.overlay-text Подробнее
+
+            +more
+
+            +pagination.__pagination
 
 
     +footer(false, false).__footer

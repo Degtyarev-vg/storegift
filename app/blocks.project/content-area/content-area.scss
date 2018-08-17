@@ -47,11 +47,21 @@
   }
 
   &__controls {
-    border-bottom: 1px solid $accentColor;
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin: 37px -15px 0;
+    position: relative;
+    &:before {
+      background-color: $accentColor;
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      height: 1px;
+      width: calc(100% - 30px);
+    }
     @include respond-to(stran) {
       flex-wrap: wrap;
       justify-content: center;
@@ -145,11 +155,159 @@
     display: flex;
     flex-wrap: wrap;
     margin: 10px -10px 20px;
+    // HORIZONTAL START
+    &_horizontal {
+      display: block;
+      @include respond-to(md) {
+        display: flex;
+      }
+      .content-area__product-item {
+        width: 100%;
+        @include respond-to(md) {
+          width: 50%;
+        }
+        @include respond-to(esm) {
+          max-width: 300px;
+          margin: 0 auto;
+          width: 100%;
+        }
+      }
+
+      .product {
+        flex-direction: row;
+        padding: 24px;
+        @include respond-to(lg) {
+          flex-wrap: wrap;
+          justify-content: space-between;
+        }
+        @include respond-to(md) {
+          flex-direction: column;
+          padding: 39px 11px 12px;
+        }
+        &__img-container {
+          max-width: 120px;
+          min-width: 120px;
+          @include respond-to(md) {
+            max-width: 246px;
+            min-width: auto;
+            width: 100%;
+          }
+        }
+        &__quantity {
+          bottom: 7px;
+          right: 7px;
+          @include respond-to(md) {
+            bottom: 9px;
+            right: 9px;
+          }
+        }
+        &__text-container {
+          text-align: left;
+          padding: 0 15px 0 39px;
+          width: calc(100% - 548px);
+          @include respond-to(stran) {
+            padding: 0 15px;
+            width: calc(100% - 508px);
+          }
+          @include respond-to(lg) {
+            order: -1;
+            width: 100%;
+            margin-bottom: 15px;
+            text-align: center;
+          }
+          @include respond-to(md) {
+            order: initial;
+            padding: 20px 0 15px;
+            margin-bottom: 0;
+            max-width: 100%;
+          }
+        }
+        &__comparison {
+          position: relative;
+          top: 0;
+          right: 0;
+          max-width: 118px;
+          min-width: 118px;
+          @include respond-to(lg) {
+            max-width: 150px;
+            min-width: 150px;
+            padding-left: 32px;
+          }
+          @include respond-to(md) {
+            position: absolute;
+            top: 13px;
+            right: 10px;
+            padding-left: 0;
+            max-width: auto;
+            min-width: auto;
+          }
+        }
+        &__bottom {
+          max-width: 310px;
+          min-width: 310px;
+          padding-left: 60px;
+          margin-top: 0;
+          @include respond-to(stran) {
+            display: flex;
+            padding-left: 15px;
+            max-width: 270px;
+            min-width: 270px;
+          }
+          @include respond-to(md) {
+            display: block;
+            text-align: right;
+            max-width: none;
+            min-width: auto;
+            padding-left: 0;
+          }
+        }
+        &__price-block {
+          @include respond-to(stran) {
+            align-items: center;
+            flex-direction: column;
+            margin-bottom: 0;
+          }
+          @include respond-to(md) {
+            flex-direction: row;
+            justify-content: center;
+            margin-bottom: 10px;
+            br {
+              display: none;
+            }
+          }
+        }
+        &__price {
+          margin-left: 0;
+          @include respond-to(stran) {
+            margin-top: 5px;
+          }
+          @include respond-to(md) {
+            margin-left: 5px;
+          }
+        }
+      }
+    }
+    // HORIZONTAL END
   }
   &__product-item {
     flex-shrink: 1;
     padding: 20px 10px 0;
     width: 25%;
+    @include respond-to(lg) {
+      width: 33.3333333%;
+    }
+    @include respond-to(md) {
+      width: 50%;
+    }
+    @include respond-to(esm) {
+      max-width: 300px;
+      margin: 0 auto;
+      width: 100%;
+    }
+  }
+
+  &__pagination {
+    margin-top: 20px;
   }
 
 }

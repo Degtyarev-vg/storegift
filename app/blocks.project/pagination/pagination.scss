@@ -1,0 +1,105 @@
+// Для импорта в файл подключения: @import './app/blocks.project/pagination/pagination';
+
+@import '../../scss/vars';     // файл с переменными
+@import '../../scss/png-sprite';    // файл с png-спрайтами
+
+
+.pagination {
+  text-align: center;
+  font-size: 0;
+
+  a {
+    display: inline-block;
+    text-decoration: none;
+    transition: $transition;
+    color: #494949;
+  }
+
+  &__prev, &__next {
+    display: inline-block;
+    font-size: 16px;
+    line-height: 1;
+    color: #494949;
+    @include respond-to(md) {
+      display: block;
+    }
+    span, a {
+      display: inline-block;
+      position: relative;
+      &:before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        transition: $transition;
+        height: 14px;
+        width: 22px;
+        background: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20height%3D%2214%22%20width%3D%2222%22%3E%3Cpath%20d%3D%22M.266%207.626a.868.867%200%200%201%200-1.25L6.59.255a.95.95%200%200%201%201.295%200%20.863.862%200%200%201%200%201.25L3.12%206.116h17.956a.882.881%200%201%201%200%201.76H3.12l4.765%204.611a.863.862%200%200%201%200%201.25.93.93%200%200%201-1.295%200z%22%20fill%3D%22%23c2c0bc%22%20fill-rule%3D%22evenodd%22%2F%3E%3C%2Fsvg%3E') center no-repeat;
+        background-size: contain;
+      }
+    }
+    span {
+      &:hover {
+        cursor: not-allowed;
+      }
+    }
+    a {
+      font-family: $open_sansbold;
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+        color: #4d567f;
+        &:before {
+          background: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2222%22%20height%3D%2214%22%3E%3Cpath%20d%3D%22M.266%207.626a.868.867%200%200%201%200-1.25L6.59.255a.95.95%200%200%201%201.295%200%20.863.862%200%200%201%200%201.25L3.12%206.116h17.956a.882.881%200%201%201%200%201.76H3.12l4.765%204.611a.863.862%200%200%201%200%201.25.93.93%200%200%201-1.295%200z%22%20fill%3D%22%234d567f%22%20fill-rule%3D%22evenodd%22%2F%3E%3C%2Fsvg%3E') center no-repeat;
+          background-size: contain;
+        }
+      }
+    }
+  }
+  &__prev {
+    @include respond-to(md) {
+      text-align: left;
+      margin-bottom: 15px;
+    }
+    span, a {
+      padding-left: 35px;
+      margin-right: 35px;
+      &:before {
+        left: 0;
+      }
+    }
+  }
+  &__next {
+    @include respond-to(md) {
+      text-align: right;
+      margin-top: 15px;
+    }
+    span, a {
+      padding-right: 35px;
+      margin-left: 35px;
+      &:before {
+        right: 0;
+        transform: translateY(-50%) rotate(180deg);
+      }
+    }
+  }
+
+  &__item {
+    display: inline-block;
+    font-size: 18px;
+    line-height: 1;
+    padding: 0 15px;
+    @include respond-to(esm) {
+      padding: 0 10px;
+    }
+    &_active {
+      color: $accentColor;
+    }
+    a {
+      &:hover {
+        color: $accentColor;
+      }
+    }
+  }
+
+}
