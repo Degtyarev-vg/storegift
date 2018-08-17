@@ -1,0 +1,89 @@
+// Для импорта в файл подключения: @import './app/blocks.project/custom-select/custom-select';
+
+@import '../../scss/vars';     // файл с переменными
+@import '../../scss/png-sprite';    // файл с png-спрайтами
+
+
+.custom-select {
+  position: relative;
+  text-align: left;
+
+  &__drop-button {
+    background-color: #fff;
+    border: 1px solid $accentColor;
+    display: block;
+    font-family: $open_sansbold;
+    font-size: 14px;
+    line-height: 1;
+    color: $accentColor;
+    padding: 4px 30px 4px 7px;
+    position: relative;
+    text-decoration: none;
+    text-overflow: ellipsis;
+    transition: $transition;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+    &:before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      right: 11px;
+      transition: $transition;
+      transform: translateY(-50%);
+      height: 0;
+      width: 0;
+      border-left: 6px solid transparent;
+      border-right: 6px solid transparent;
+      border-top: 6px solid $accentColor;
+    }
+    &_active {
+      border-color: transparent;
+      box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.2);
+      &:before {
+        transform: translateY(-50%) rotate(180deg);
+      }
+    }
+  }
+
+  &__drop-list {
+    background-color: #fff;
+    border-radius: 0 0 5px 5px;
+    box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.2);
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    max-height: 400px;
+    overflow: auto;
+  }
+
+  &__drop-item {
+    display: block;
+    overflow: hidden;
+    &_selected {
+      .custom-select__drop-link {
+        background-color: $accentColor;
+        color: #fff;
+      }
+    }
+  }
+
+  &__drop-link {
+    display: block;
+    font-size: 14px;
+    line-height: 1.2px;
+    padding: 10px 15px;
+    position: relative;
+    color: $accentColor;
+    text-decoration: none;
+    transition: $transition;
+    &:hover {
+      background-color: $accentColor;
+      color: #fff;
+    }
+  }
+
+}

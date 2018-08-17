@@ -1,0 +1,31 @@
+// Для импорта в файл подключения: @import './app/blocks.project/view/view';
+
+@import '../../scss/vars';     // файл с переменными
+@import '../../scss/png-sprite';    // файл с png-спрайтами
+
+
+.view {
+  display: inline-block;
+  font-size: 0;
+
+  &__icon {
+    background-size: contain;
+    transition: $transition;
+    height: 23px;
+    width: 23px;
+    &_tile {
+      background: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20height%3D%2223%22%20width%3D%2223%22%3E%3Cpath%20data-name%3D%22%D0%9F%D1%80%D1%8F%D0%BC%D0%BE%D1%83%D0%B3%D0%BE%D0%BB%D1%8C%D0%BD%D0%B8%D0%BA%201043%22%20fill%3D%22none%22%20d%3D%22M-5-5h33v33H-5z%22%2F%3E%3Cpath%20d%3D%22M0%200h10v10H0zm13%200h10v10H13zM0%2013h10v10H0zm13%200h10v10H13z%22%20data-name%3D%22icon_plitka-off%20(svg)%22%20fill%3D%22%23e2e1df%22%20fill-rule%3D%22evenodd%22%2F%3E%3C%2Fsvg%3E') center no-repeat;
+      &.view__icon_active {
+        background: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20height%3D%2223%22%20width%3D%2223%22%3E%3Cpath%20data-name%3D%22%D0%9F%D1%80%D1%8F%D0%BC%D0%BE%D1%83%D0%B3%D0%BE%D0%BB%D1%8C%D0%BD%D0%B8%D0%BA%201043%22%20fill%3D%22none%22%20d%3D%22M-5-5h33v33H-5z%22%2F%3E%3Cpath%20d%3D%22M0%200h10v10H0zm13%200h10v10H13zM0%2013h10v10H0zm13%200h10v10H13z%22%20data-name%3D%22icon_plitka-off%20(svg)%22%20fill%3D%22%23c69c6d%22%20fill-rule%3D%22evenodd%22%2F%3E%3C%2Fsvg%3E') center no-repeat;
+      }
+    }
+    &_list {
+      margin-right: 10px;
+      background: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20height%3D%2223%22%20width%3D%2223%22%3E%3Cpath%20data-name%3D%22%D0%9F%D1%80%D1%8F%D0%BC%D0%BE%D1%83%D0%B3%D0%BE%D0%BB%D1%8C%D0%BD%D0%B8%D0%BA%201043%22%20fill%3D%22none%22%20d%3D%22M-5-5h33v33H-5z%22%2F%3E%3Cpath%20d%3D%22M0%200h4.792v5H0zm0%209h4.792v5H0zm0%209h4.792v5H0zM7.667%200H23v5H7.667zm0%209H23v5H7.667zm0%209H23v5H7.667z%22%20data-name%3D%22icon_spisok-off%20(svg)%22%20fill%3D%22%23e2e1df%22%20fill-rule%3D%22evenodd%22%2F%3E%3C%2Fsvg%3E') center no-repeat;
+      &.view__icon_active {
+        background: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20height%3D%2223%22%20width%3D%2223%22%3E%3Cpath%20data-name%3D%22%D0%9F%D1%80%D1%8F%D0%BC%D0%BE%D1%83%D0%B3%D0%BE%D0%BB%D1%8C%D0%BD%D0%B8%D0%BA%201043%22%20fill%3D%22none%22%20d%3D%22M-5-5h33v33H-5z%22%2F%3E%3Cpath%20d%3D%22M0%200h4.792v5H0zm0%209h4.792v5H0zm0%209h4.792v5H0zM7.667%200H23v5H7.667zm0%209H23v5H7.667zm0%209H23v5H7.667z%22%20data-name%3D%22icon_spisok-off%20(svg)%22%20fill%3D%22%23c69c6d%22%20fill-rule%3D%22evenodd%22%2F%3E%3C%2Fsvg%3E') center no-repeat;
+      }
+    }
+  }
+
+}

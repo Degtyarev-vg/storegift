@@ -1,0 +1,44 @@
+// Для импорта в файл подключения: @import './app/blocks.project/breadcrumbs/breadcrumbs';
+
+@import '../../scss/vars';     // файл с переменными
+@import '../../scss/png-sprite';    // файл с png-спрайтами
+
+
+.breadcrumbs {
+  margin: 0 -12px;
+
+  li {
+    display: inline-block;
+    font-family: $open_sanssemibold;
+    font-size: 13px;
+    color: $accentColor;
+    padding: 5px 12px;
+    position: relative;
+    &:before {
+      background-color: $accentColor;
+      content: '';
+      position: absolute;
+      top: 50%;
+      right: -2px;
+      transform: translateY(-50%);
+      height: 4px;
+      width: 4px;
+    }
+    &:last-of-type {
+      text-decoration: underline;
+      &:before {
+        display: none;
+      }
+    }
+  }
+
+  a {
+    text-decoration: none;
+    transition: $transition;
+    color: #494949;
+    &:hover {
+      color: $accentColor;
+    }
+  }
+
+}

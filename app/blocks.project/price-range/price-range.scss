@@ -1,0 +1,146 @@
+// Для импорта в файл подключения: @import './app/blocks.project/price-range/price-range';
+
+@import '../../scss/vars';     // файл с переменными
+@import '../../scss/png-sprite';    // файл с png-спрайтами
+
+
+/* RANGE SLIDER START */
+.irs {
+  flex-shrink: 1;
+  position: relative;
+  display: block;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  width: 100%;
+}
+.irs-line {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  outline: none !important;
+}
+
+.irs-bar {
+  position: absolute;
+  display: block;
+  left: 0;
+  width: 0;
+}
+.irs-bar-edge {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+}
+
+.irs-slider {
+  position: absolute;
+  display: block;
+  cursor: default;
+  z-index: 1;
+}
+
+.irs-slider.type_last {
+  z-index: 2;
+}
+
+.irs-hidden-input {
+  position: absolute !important;
+  display: block !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 0 !important;
+  height: 0 !important;
+  font-size: 0 !important;
+  line-height: 0 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  outline: none !important;
+  z-index: -9999 !important;
+  background: none !important;
+  border-style: solid !important;
+  border-color: transparent !important;
+}
+
+// Skin details */
+
+.irs {
+  height: 20px;
+}
+.irs-line {
+  height: 3px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #e9e9e9;
+}
+
+.irs-bar {
+  height: 3px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #eec431;
+}
+.irs-bar-edge {
+  height: 3px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #eec431;
+}
+
+.irs-slider {
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  background: #c69c6d;
+  border-radius: 2px;
+  cursor: pointer;
+  &:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 10px;
+    width: 10px;
+    background: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20height%3D%2210%22%20width%3D%2210%22%20id%3D%22icon_handle%22%20enable-background%3D%22new%22%3E%3Cdefs%20id%3D%22defs17%22%3E%3Cstyle%20id%3D%22style4%22%3E%3C%2Fstyle%3E%3Cfilter%20id%3D%22filter923%22%20color-interpolation-filters%3D%22sRGB%22%3E%3CfeBlend%20id%3D%22feBlend925%22%20in2%3D%22BackgroundImage%22%20mode%3D%22overlay%22%2F%3E%3C%2Ffilter%3E%3C%2Fdefs%3E%3Cpath%20d%3D%22M.75%200h8.5a.75.75%200%200%201%20.75.75v.5a.75.75%200%200%201-.75.75H.75A.75.75%200%200%201%200%201.25v-.5A.75.75%200%200%201%20.75%200zm0%204h8.5a.75.75%200%200%201%20.75.75v.5a.75.75%200%200%201-.75.75H.75A.75.75%200%200%201%200%205.25v-.5A.75.75%200%200%201%20.75%204zm0%204h8.5a.75.75%200%200%201%20.75.75v.5a.75.75%200%200%201-.75.75H.75A.75.75%200%200%201%200%209.25v-.5A.75.75%200%200%201%20.75%208z%22%20data-name%3D%22%D0%9F%D1%80%D1%8F%D0%BC%D0%BE%D1%83%D0%B3%D0%BE%D0%BB%D1%8C%D0%BD%D0%B8%D0%BA%2C%20%D1%81%D0%BA%D1%80%D1%83%D0%B3%D0%BB.%20%D1%83%D0%B3%D0%BB%D1%8B%201%22%20id%3D%22%D0%9F%D1%80%D1%8F%D0%BC%D0%BE%D1%83%D0%B3%D0%BE%D0%BB%D1%8C%D0%BD%D0%B8%D0%BA_%D1%81%D0%BA%D1%80%D1%83%D0%B3%D0%BB._%D1%83%D0%B3%D0%BB%D1%8B_1%22%20fill%3D%22%23fff%22%20fill-rule%3D%22evenodd%22%2F%3E%3C%2Fsvg%3E') center no-repeat;
+    background-size: contain;
+  }
+}
+/* RANGE SLIDER END */
+
+.price-range {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__input {
+    border: 1px solid $accentColor;
+    font-size: 14px;
+    line-height: 1;
+    color: #494949;
+    padding: 3px 7px;
+    max-width: 80px;
+    min-width: 80px;
+    @include respond-to(sm) {
+      padding: 3px;
+      max-width: 60px;
+      min-width: 60px;
+    }
+    &:first-of-type {
+      margin-right: 10px;
+    }
+    &:last-of-type {
+      margin-left: 10px;
+    }
+    &:focus {
+      outline: 0;
+      box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(198, 156, 109, 0.6);
+    }
+  }
+
+}

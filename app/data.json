@@ -354,6 +354,116 @@
 			"name": "Яндекс.Деньги"
 		}
 	},
+	"products": {
+		"product1": {
+			"img": "img/products/1.jpg",
+			"name": "Швабра для мытья окон Спрей-моп \"easy-mop\"",
+			"size": "L=130 см",
+			"price": "1 100",
+			"oldPrice": false,
+			"quantity": false,
+			"youtube": false
+		},
+		"product2": {
+			"img": "img/products/2.jpg",
+			"name": "Набор для ванной комнаты 4 пр.: дозатор+подставка",
+			"size": false,
+			"price": "2 700",
+			"oldPrice": "3 000",
+			"quantity": "2",
+			"youtube": true
+		},
+		"product3": {
+			"img": "img/products/3.jpg",
+			"name": "Набор корзин для белья с ручками и завязками из 3-х штук",
+			"size": false,
+			"price": "4 000",
+			"oldPrice": false,
+			"quantity": false,
+			"youtube": false
+		},
+		"product4": {
+			"img": "img/products/4.jpg",
+			"name": "Стакан для зубных щеток с держателем",
+			"size": "D=9 см., H=16 см.",
+			"price": "3 000",
+			"oldPrice": false,
+			"quantity": "2",
+			"youtube": false
+		},
+		"product5": {
+			"img": "img/products/4.jpg",
+			"name": "Стакан для зубных щеток с держателем",
+			"size": "D=9 см., H=16 см.",
+			"price": "3 000",
+			"oldPrice": false,
+			"quantity": "2",
+			"youtube": false
+		},
+		"product6": {
+			"img": "img/products/3.jpg",
+			"name": "Набор корзин для белья с ручками и завязками из 3-х штук",
+			"size": false,
+			"price": "4 000",
+			"oldPrice": false,
+			"quantity": false,
+			"youtube": false
+		},
+		"product7": {
+			"img": "img/products/1.jpg",
+			"name": "Швабра для мытья окон Спрей-моп \"easy-mop\"",
+			"size": "L=130 см",
+			"price": "1 100",
+			"oldPrice": false,
+			"quantity": false,
+			"youtube": false
+		},
+		"product8": {
+			"img": "img/products/2.jpg",
+			"name": "Набор для ванной комнаты 4 пр.: дозатор+подставка",
+			"size": false,
+			"price": "2 700",
+			"oldPrice": "3 000",
+			"quantity": "2",
+			"youtube": true
+		},
+		"product9": {
+			"img": "img/products/2.jpg",
+			"name": "Набор для ванной комнаты 4 пр.: дозатор+подставка",
+			"size": false,
+			"price": "2 700",
+			"oldPrice": "3 000",
+			"quantity": "2",
+			"youtube": true
+		},
+		"product10": {
+			"img": "img/products/1.jpg",
+			"name": "Швабра для мытья окон Спрей-моп \"easy-mop\"",
+			"size": "L=130 см",
+			"price": "1 100",
+			"oldPrice": false,
+			"quantity": false,
+			"youtube": false
+		},
+		"product11": {
+			"img": "img/products/4.jpg",
+			"name": "Стакан для зубных щеток с держателем",
+			"size": "D=9 см., H=16 см.",
+			"price": "3 000",
+			"oldPrice": false,
+			"quantity": "2",
+			"youtube": false
+		},
+		"product12": {
+			"img": "img/products/3.jpg",
+			"name": "Набор корзин для белья с ручками и завязками из 3-х штук",
+			"size": false,
+			"price": "4 000",
+			"oldPrice": false,
+			"quantity": false,
+			"youtube": false
+		}
+	},
 	"topMenu": {
 		"item1": {
 			"name": "Контакты",

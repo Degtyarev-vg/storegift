@@ -1,0 +1,155 @@
+// Для импорта в файл подключения: @import './app/blocks.project/content-area/content-area';
+
+@import '../../scss/vars';     // файл с переменными
+@import '../../scss/png-sprite';    // файл с png-спрайтами
+
+
+.content-area {
+  font-size: 14px;
+  line-height: 1.3;
+  color: #494949;
+  padding-top: 15px;
+
+  h1 {
+    font-family: $officinaserifboldcregular;
+    font-size: 30px;
+    line-height: 1.4;
+    position: relative;
+    text-align: center;
+    padding: 0 185px 14px;
+    margin-bottom: 17px;
+    color: #3b4472;
+    @include respond-to(xl) {
+      padding: 0 0 14px;
+    }
+    &:before {
+      background-color: #3b4472;
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      height: 5px;
+      width: 39px;
+    }
+  }
+
+  &__total-quantity {
+    text-align: right;
+    margin-top: -33px;
+    @include respond-to(xl) {
+      margin-top: 0;
+    }
+  }
+
+  &__advertising-banner {
+    margin-top: 17px;
+  }
+
+  &__controls {
+    border-bottom: 1px solid $accentColor;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 37px -15px 0;
+    @include respond-to(stran) {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    @include respond-to(sm) {
+      display: block;
+    }
+  }
+  &__control-item {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: #494949;
+    padding: 0 15px 27px;
+    @include respond-to(sm) {
+      display: block;
+      padding: 0 15px 15px;
+    }
+    &_sort {
+      min-width: 295px;
+      max-width: 295px;
+      @include respond-to(stran) {
+        min-width: calc(100% - 391px);
+        max-width: calc(100% - 391px);
+      }
+      @include respond-to(md) {
+        min-width: calc(100% - 202px);
+        max-width: calc(100% - 202px);
+      }
+      @include respond-to(sm) {
+        min-width: 100%;
+        max-width: 100%;
+      }
+    }
+    &_show-quantity {
+      order: 2;
+      min-width: 202px;
+      max-width: 202px;
+      @include respond-to(stran) {
+        order: initial;
+      }
+      @include respond-to(sm) {
+        min-width: 100%;
+        max-width: 100%;
+      }
+    }
+    &_price {
+      order: 1;
+      min-width: calc(100% - 686px);
+      max-width: calc(100% - 686px);
+      @include respond-to(stran) {
+        order: 2;
+        min-width: calc(100% - 189px);
+        max-width: calc(100% - 189px);
+      }
+      @include respond-to(md) {
+        min-width: 100%;
+        max-width: 100%;
+      }
+    }
+    &_view {
+      order: 3;
+      min-width: 189px;
+      max-width: 189px;
+      @include respond-to(stran) {
+        order: 1;
+      }
+      @include respond-to(md) {
+        display: none !important;
+      }
+    }
+  }
+  &__control-item-text {
+    display: inline-block;
+    margin-right: 10px;
+    white-space: nowrap;
+    @include respond-to(sm) {
+      display: block;
+      margin-bottom: 7px;
+    }
+  }
+
+  &__price-range {
+    width: calc(100% - 79px);
+    @include respond-to(sm) {
+      width: 100%;
+    }
+  }
+
+  &__products-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px -10px 20px;
+  }
+  &__product-item {
+    flex-shrink: 1;
+    padding: 20px 10px 0;
+    width: 25%;
+  }
+
+}

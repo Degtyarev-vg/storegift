@@ -20,7 +20,69 @@ html(lang='ru')
           +b('button').catalog-btn
             +e.text Каталог
 
-          //-+content-main
+          +breadcrumbs(['Главная', 'Каталог', 'Ванная комната'])
+
+          +b.content-area
+            h1 Ванная комната
+            +e('p').total-quantity Всего товаров: <span>30</span>
+
+            +advertising-banner.__advertising-banner
+
+            +e.controls
+              +e.control-item._sort
+                +e('span').control-item-text Упорядочить:
+                +b.custom-select.__custom-select
+                  +e('a')(href='javascript:undefined').drop-button Сначала дороже
+                  +e('ul').drop-list
+                    +e('li').drop-item._selected
+                      +e('a')(href='expensive').drop-link Сначала дороже
+                    +e('li').drop-item
+                      +e('a')(href='cheap').drop-link Сначала дешевле
+                  +e('input')(type='hidden' name='sort' value='expensive').drop-hidden-input
+              +e.control-item._show-quantity
+                +e('span').control-item-text Показывать по:
+                +b.custom-select.__custom-select
+                  +e('a')(href='javascript:undefined').drop-button 18
+                  +e('ul').drop-list
+                    +e('li').drop-item._selected
+                      +e('a')(href='18').drop-link 18
+                    +e('li').drop-item
+                      +e('a')(href='30').drop-link 30
+                    +e('li').drop-item
+                      +e('a')(href='40').drop-link 40
+                    +e('li').drop-item
+                      +e('a')(href='50').drop-link 50
+                  +e('input')(type='hidden' name='showQuantity' value='18').drop-hidden-input
+              +e.control-item._price
+                +e('span').control-item-text Цена (руб.):
+                +price-range.__price-range
+              +e.control-item._view
+                +e('span').control-item-text Вид каталога:
+                +view.__view
+
+            +e.products-list
+              each item in products
+                +e.product-item
+                  +b.product
+                    if item.youtube
+                      +e('span').youtube
+                    +e('a')(href='#').img-container
+                      +e('img')(src=item.img alt=item.name).img
+                      if item.quantity
+                        +e('span').quantity !{item.quantity}
+                    +e('a')(href='#').name !{item.name}
+                    if item.size
+                      +e('a')(href='#').size !{item.size}
+                    +e('a')(href='javascript:undefined').comparison К сравнению
+                    +e('a')(href='javascript:undefined').comparison._add В сравнении
+                    +e.bottom
+                      +e.price-block
+                        +e('span').price !{item.price}
+                        if item.oldPrice
+                          +e('span').old-price !{item.oldPrice}
+                      +e('a')(href='#popup-add-basket').basket.popup-with-zoom-anim В корзину
+                    +e('a')(href='#').overlay
+                      +e.overlay-text Подробнее
 
 
     +footer(false, false).__footer

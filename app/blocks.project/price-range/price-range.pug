@@ -1,0 +1,5 @@
+mixin price-range()
+  +b.price-range&attributes(attributes)
+    +e('input')(type='text' name='only_digits' value='0' autocomplete='off').input._from
+    +e('input')(type='text' value='').slider
+    +e('input')(type='text' name='only_digits' value='0' autocomplete='off').input._to

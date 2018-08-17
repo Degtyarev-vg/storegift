@@ -1,0 +1,89 @@
+// Для импорта в файл подключения: @import './app/blocks.project/advertising-banner/advertising-banner';
+
+@import '../../scss/vars';     // файл с переменными
+@import '../../scss/png-sprite';    // файл с png-спрайтами
+
+
+.advertising-banner {
+  background: url('../img/bg_advertising-banner.jpg') center no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: $officinaserifboldcregular;
+  font-size: 18px;
+  line-height: 1.3;
+  color: #fefefe;
+  padding: 25px 33px 28px;
+  @include respond-to(lg) {
+    background: #e2b037;
+    background: linear-gradient(to bottom, #eec531, #dda739);
+    padding: 20px 15px;
+  }
+  @include respond-to(md) {
+    display: block;
+    text-align: center;
+  }
+
+  h2 {
+    flex-shrink: 1;
+    font-size: 30px;
+    min-width: calc(100% - 248px);
+    max-width: calc(100% - 248px);
+    padding-right: 20px;
+    @include respond-to(lg) {
+      font-size: 24px;
+      min-width: calc(100% - 180px);
+      max-width: calc(100% - 180px);
+    }
+    @include respond-to(md) {
+      min-width: 100%;
+      max-width: 100%;
+      padding-right: 0;
+      margin-bottom: 20px;
+    }
+    span {
+      font-size: 48px;
+      @include respond-to(lg) {
+        font-size: 40px;
+      }
+    }
+  }
+
+  &__button {
+    border: 3px solid #fff;
+    display: inline-block;
+    font-size: 16px;
+    line-height: 1;
+    padding: 12px 140px 12px 23px;
+    position: relative;
+    text-decoration: none;
+    transition: $transition;
+    color: #fefefe;
+    min-width: 248px;
+    max-width: 248px;
+    @include respond-to(lg) {
+      padding: 10px 70px 10px 15px;
+      min-width: 180px;
+      max-width: 180px;
+    }
+    &:before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      right: 37px;
+      transform: translateY(-50%);
+      height: 14px;
+      width: 22px;
+      background: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20height%3D%2214%22%20width%3D%2222%22%3E%3Cpath%20d%3D%22M21.735%207.624a.89.876%200%200%200%200-1.248L15.412.258a.931.916%200%200%200-1.296%200%20.882.868%200%200%200%200%201.249l4.765%204.61H.928a.897.883%200%201%200%200%201.766H18.88l-4.765%204.61a.882.868%200%200%200%200%201.248.93.915%200%200%200%201.296%200z%22%20fill%3D%22%23fff%22%20fill-rule%3D%22evenodd%22%2F%3E%3C%2Fsvg%3E') center no-repeat;
+      background-size: contain;
+      @include respond-to(lg) {
+        right: 15px;
+      }
+    }
+    &:hover {
+      background-color: $accentColor;
+      border-color: $accentColor;
+    }
+  }
+}
