@@ -1,0 +1,94 @@
+include ../blocks.project/includes
+
+doctype html
+html(lang='ru')
+  include templates/head/head
+    block head
+      - var pageTitle = 'Карточка товара | Store Gift - магазин хороших подарков';
+
+  +page._with-catalog
+
+    +header(false, true).__header
+
+
+    +b.content._with-catalog.__content
+
+      +catalog.__catalog
+
+      +e.inner
+        .grid
+          +b('button').catalog-btn
+            +e('span').text Каталог
+
+          +breadcrumbs(['Главная', 'Каталог', 'Ванная комната', 'Набор корзин для белья с ручками и завязками из 3-х штук'])
+
+          +b('section').section-card.text
+            +e.slider-container
+              +card-slider
+
+            +e.info-container
+              h1 Набор корзин для белья с ручками и завязками из 3-х штук
+              p L - 40*42 см, M - 36*39 см, S - 32*37 см.
+              +b.availability._true.__availability
+                +e.top
+                  +e.in-stock В наличии
+                  +e.articul Артикул: 84353
+                +e.content-true
+                  +e.price-block
+                    +e('span').price 4 000
+                    br
+                    +e('span').old-price 4 200
+                  +e('a')(href='#popup-add-basket').button._addbasket.popup-with-zoom-anim В корзину
+                +e.bottom
+                  +e('a')(href='javascript:undefined').comparison К сравнению
+                  //<a class="availability__comparison availability__comparison_add" href="javascript:undefined">В сравнении</a>
+                  +e('a')(href='javascript:undefined').help Помощь
+
+              +b.availability._false.__availability
+                +e.top
+                  +e.in-stock Нет в наличии
+                  +e.articul Артикул: 84353
+                +e.content-false
+                  +e.text <b>Нам очень жаль, но этого товара сейчас нет в наличии.</b><br/>Оставте свои данные, и мы подеберем для Вас аналог и сообщим, когда товар будет доступен.
+                  +e('form')(action='#' method='post' autocomplete='off').form
+                    +e('label')(for='name').label Имя:
+                    +e('input')(type='text' name='name').input#name
+                    +e('label')(for='phone').label Тел.:
+                    +e('input')(type='text' name='phone').input.mask-phone#phone
+                    +e('input')(type='submit' value='Отправить').button._send
+                +e.bottom
+                  +e('a')(href='javascript:undefined').comparison К сравнению
+                  //-+e('a')(href='javascript:undefined').comparison._add В сравнении
+                  +e('a')(href='javascript:undefined').help Помощь
+              ul
+                li <b>Правила ухода:</b> Не требуются.
+                li <b>Сертификация:</b> Товар не подлежит обязательной сертификации.
+                li <b>Состав:</b> Ткань
+                li <b>Производство:</b> Китай.
+
+            +e.text-container
+              h6 Описание:
+              p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+              hr
+              a(href='#') This is link
+              hr
+              h6 This is NOT NUMERIC list
+              ul
+                li Lorem ipsum dolor.
+                li Lorem ipsum dolor.
+                li Lorem ipsum dolor.
+              hr
+              h6 This is NUMERIC list
+              ol
+                li Lorem ipsum dolor sit amet.
+                li Lorem ipsum dolor sit amet.
+                li Lorem ipsum dolor sit amet.
+
+            +e.video-container
+              h6 Видеообзор:
+              +e(data-youtube-id='3d0Ep1Gmbmg' data-parameters="rel=0").video.lazyYT
+
+
+    +footer(false, false).__footer
+
+    +quick-panel

@@ -1,4 +1,5 @@
 @import './app/blocks/includes';
+@import './app/blocks.project/text/text';
 @import './app/blocks.project/catalog/catalog';
 @import './app/blocks.project/content/content';
 @import './app/blocks.project/footer/footer';
@@ -19,3 +20,7 @@
 @import './app/blocks.project/product/product';
 @import './app/blocks.project/more/more';
 @import './app/blocks.project/pagination/pagination';
+@import './app/blocks.project/section-card/section-card';
+@import './app/blocks.project/card-slider/card-slider';
+@import './app/blocks.project/availability/availability';
+@import './app/blocks.project/lazyYT/lazyYT';

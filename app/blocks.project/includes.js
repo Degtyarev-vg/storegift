@@ -8,3 +8,6 @@
 //= include view/view.js
 //= include price-range/price-range.js
 //= include product/product.js
+//= include card-slider/card-slider.js
+//= include mask/mask.js
+//= include lazyYT/lazyYT.js
