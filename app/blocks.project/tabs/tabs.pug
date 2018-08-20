@@ -1,0 +1,39 @@
+mixin tabs()
+  +b.tabs&attributes(attributes)
+    +e('ul').nav
+      +e('li').item._active
+        +e('a')(href='#tab1').link Доставка
+      +e('li').item
+        +e('a')(href='#tab2').link Способы доставки
+    +e.content.text
+      +e.tab-content#tab1
+        +b.custom-select.__custom-select
+          +e('a')(href='javascript:undefined').drop-button По Санкт-Петербургу и Лен. области
+          +e('ul').drop-list
+            +e('li').drop-item._selected
+              +e('a')(href='spb').drop-link По Санкт-Петербургу и Лен. области
+            +e('li').drop-item
+              +e('a')(href='msk').drop-link По Москве и Московской области
+            +e('li').drop-item
+              +e('a')(href='regions').drop-link Регионы
+          +e('input')(type='hidden' name='ways-of-delivery' value='spb').drop-hidden-input
+
+        h2 Санкт-Петербург
+        p <b>Срок доставки 1–3 рабочих дней</b>
+        p Доставка заказов осуществляется <b>в будние дни с 09.00 до 21.00</b>, с 3-х часовыми интервалами. В выходные дни <b>единый интервал с 09.00 до 18.00</b> без временных интервалов.
+        +b.table TABLE
+        h2 Лен. область
+        p <b>Срок доставки 1–5 рабочих дней</b>
+        p Доставка заказов осуществляется <b>с 09.00 до 18.00</b> без временных интервалов.
+        +b.table TABLE
+        h2 Срочная доставка по Санкт-Петербургу
+        +b.table TABLE
+        h2 Самовывоз
+        p(style='color:#ff3f3f') <b>Уважаемые покупатели! При получении товара в пунктах самовывоза ОБЯЗАТЕЛЬНО проверяйте товар на предмет повреждений и брака. Забранный товар обмену и возврату не подлежит.</b>
+        br
+        p(style='color:#3b4472') Выдача заказов в ПУНКТАХ ВЫДАЧИ  производится <b>через 2–4 рабочих дня после дня заказа товара.</b> Обращаем Ваше внимание, что в <b>пунктах выдачи интернет-заказов выставочного зала и склада нет! </b>
+        +b.logistic LOGISTIC
+        +b.table TABLE
+
+      +e.tab-content#tab2
+        span TWO

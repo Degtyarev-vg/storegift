@@ -1,0 +1,106 @@
+// Для импорта в файл подключения: @import './app/blocks.project/order-table/order-table';
+
+@import '../../scss/vars';     // файл с переменными
+@import '../../scss/png-sprite';    // файл с png-спрайтами
+
+
+.order-table {
+  border: 2px solid #dcdad8;
+  padding: 0 20px;
+  @include respond-to(md) {
+    padding: 0 15px;
+  }
+
+  &__tr {
+    border-bottom: 1px solid #b9b6b2;
+    display: flex;
+    align-items: center;
+    color: #494949;
+    &:last-of-type {
+      border-bottom: 0;
+    }
+    @include respond-to(md) {
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    @include respond-to(esmm) {
+      justify-content: center;
+      text-align: center;
+    }
+  }
+
+  &__td {
+    flex-shrink: 1;
+    padding: 15px 0;
+    @include respond-to(esmm) {
+      padding: 10px 0;
+    }
+    &_articul {
+      width: 130px;
+    }
+    &_name {
+      padding: 15px;
+      width: calc(100% - 310px);
+      @include respond-to(md) {
+        order: -1;
+        padding: 15px 0;
+        width: 100%;
+      }
+      @include respond-to(esmm) {
+        padding: 10px 0;
+      }
+    }
+    &_price {
+      width: 120px;
+    }
+    &_quantity {
+      text-align: right;
+      width: 60px;
+    }
+  }
+
+  &__articul {
+    font-family: $open_sansbold;
+    font-size: 14px;
+  }
+
+  &__name {
+    font-family: $open_sansbold;
+    font-size: 14px;
+    text-decoration: none;
+    transition: $transition;
+    color: #3b4472;
+    &:hover {
+      color: $accentColor;
+    }
+  }
+
+  &__price {
+    display: inline-block;
+    font-family: $open_sansbold;
+    font-size: 24px;
+    line-height: 1;
+    padding-right: 19px;
+    color: #494949;
+    position: relative;
+    margin-left: 10px;
+    &:before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
+      height: 18px;
+      width: 15px;
+      background: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20height%3D%2218%22%20width%3D%2215%22%3E%3Cpath%20d%3D%22M14.61%207.13a4.815%204.813%200%200%201-1.13%201.65%205.31%205.308%200%200%201-1.8%201.118%206.662%206.66%200%200%201-2.39.405H5.96v2h2.56v2.955H5.96V18H2.61v-2.746H0v-2.951h2.61v-1.95H0V7.404h2.61V0H9.3a6.661%206.658%200%200%201%202.39.4%205.286%205.284%200%200%201%201.79%201.118%204.812%204.81%200%200%201%201.13%201.643%205.247%205.245%200%200%201%200%203.968zM10.98%203.5a2.586%202.585%200%200%200-1.85-.623H5.96v4.528h3.17a2.637%202.636%200%200%200%201.85-.615%202.141%202.14%200%200%200%20.67-1.635%202.177%202.176%200%200%200-.67-1.656z%22%20fill%3D%22%23494949%22%20fill-rule%3D%22evenodd%22%2F%3E%3C%2Fsvg%3E') center no-repeat;
+      background-size: contain;
+    }
+  }
+
+  &__quantity {
+    font-family: $open_sanssemibold;
+    font-size: 16px;
+    color: #494949;
+  }
+
+}

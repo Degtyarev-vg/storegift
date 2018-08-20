@@ -1,0 +1,63 @@
+include ../blocks.project/includes
+
+doctype html
+html(lang='ru')
+  include templates/head/head
+    block head
+      - var pageTitle = 'оформление заказа | Store Gift - магазин хороших подарков';
+
+  +page
+
+    +header(false, true).__header
+
+
+    +b.content.__content
+
+      +e.inner
+        .grid
+
+          +breadcrumbs(['Главная', 'Корзина', 'Оформить заказ'])
+
+          +b.content-area
+            h1 Оформить заказ
+
+            +b.order-table
+              +e.tr
+                +e.td._articul
+                  +e.articul Артикул: 95321
+                +e.td._name
+                  +e('a')(href='#').name Набор корзин для белья с ручками и завязками из 3-х штук
+                +e.td._price
+                  +e.price 4 000
+                +e.td._quantity
+                  +e.quantity 1 шт.
+              +e.tr
+                +e.td._articul
+                  +e.articul Артикул: 94598
+                +e.td._name
+                  +e('a')(href='#').name Набор для ванной комнаты 4 пр.:дозатор+подставка для мыла, подставка для зубных щеток,стакан
+                +e.td._price
+                  +e.price 4 000
+                +e.td._quantity
+                  +e.quantity 1 шт.
+
+            form(action='#' method='post' autocomplete='off')
+              +order-form.__order-form
+
+              +b.basket-dashboard._order.__basket-dashboard
+                +e.container
+                  +e.item._btn-back
+                    +b('a')(href='#').button._border._arrow-left.__btn-back Вернуться к корзине
+                  +e.item._quantity
+                    +e.quantity В вашей корзине <span>3 товара</span>
+                  +e.item._price
+                    +e.price Сумма к оплате <span>8 000</span>
+                  +e.item._order
+                    +b('a')(href='#').button._full._arrow-right.__order Оформить заказ
+
+            +tabs.__tabs
+
+
+    +footer(false, false).__footer
+
+    +quick-panel

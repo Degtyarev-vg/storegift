@@ -1,0 +1,20 @@
+mixin order-form()
+  +b.order-form&attributes(attributes)
+    h2 Контактная информация
+    p Для завершения оформления заказа, пожалуйста, заполните форму контактной информации, чтобы мы могли связаться с Вами и обсудить условия доставки и способ оплаты товара.
+    +e.content
+      +e.item._name
+        label(for='order-name') Имя и фамилия получателя:
+        input(type='text' name='name')#order-name
+      +e.item._email
+        label(for='order-email') Электронный адрес:
+        input(type='email' name='email')#order-email.valid
+      +e.item._phone
+        label(for='order-phone') Номер телефона:
+        input(type='text' name='phone')#order-phone.mask-phone
+      +e.item
+        label(for='order-address') Адрес доставки:
+        input(type='text' name='address')#order-address.invalid
+      +e.item
+        label(for='order-text') Коментарий к заказу:
+        textarea(name='text')#order-text

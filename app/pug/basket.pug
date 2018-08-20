@@ -1,0 +1,77 @@
+include ../blocks.project/includes
+
+doctype html
+html(lang='ru')
+  include templates/head/head
+    block head
+      - var pageTitle = 'Корзина | Store Gift - магазин хороших подарков';
+
+  +page
+
+    +header(false, true).__header
+
+
+    +b.content.__content
+
+      +e.inner
+        .grid
+
+          +breadcrumbs(['Главная', 'Корзина'])
+
+          +b.content-area
+            h1 Корзина
+
+            - let i = 1;
+            each item in basket
+              +b(class='basket-item' + ((i === 3) ? '_deleted' : '')).__basket-item
+                +e.img-container
+                  +e('a')(href='#').img-link
+                    img(src=item.img alt=item.name)
+                +e.content
+                  +e('a')(href='#').name !{item.name}
+                  +e.articul Артикул: !{item.articul}
+                  +e.availability В наличии !{item.availability} шт.
+                +e.price-container
+                  +e.price !{item.price}
+                +e.quantity-container
+                  +e('span').minus
+                  +e('input')(type='text' value='1').quantity.only-digits
+                  +e('span').plus
+                +e.delete-container
+                  if i === 3
+                    +e.deleted Удалено
+                  else
+                    +e('a')(href='javascript:undefined').delete Удалить
+                      +e('span').delete-icon
+              - i++;
+
+            +b.basket-dashboard._basket.__basket-dashboard
+              +e.container
+                +e.item._clear-basket
+                  +b('a')(href='#').button._4._clear-basket.__button4 Очистить корзину
+                    +e('span').icon
+                +e.item._refresh
+                  +b('a')(href='#').button._4._refresh.__button4 Обновить
+                    +e('span').icon
+                +e.item._quantity
+                  +e.quantity В вашей корзине <span>3 товара</span>
+                +e.item._price
+                  +e.price Сумма к оплате <span>8 000</span>
+                +e.item._order
+                  +b('a')(href='#').button._full._arrow-right.__order Оформить заказ
+
+            //-+b.basket-dashboard._order.__basket-dashboard
+              +e.container
+                +e.item._btn-back
+                  +b('a')(href='#').button._border._arrow-left.__btn-back Вернуться к корзине
+                +e.item._quantity
+                  +e.quantity В вашей корзине <span>3 товара</span>
+                +e.item._price
+                  +e.price Сумма к оплате <span>8 000</span>
+                +e.item._order
+                  +b('a')(href='#').button._full._arrow-right.__order Оформить заказ
+
+
+    +footer(false, false).__footer
+
+    +quick-panel

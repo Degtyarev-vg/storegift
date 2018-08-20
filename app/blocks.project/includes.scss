@@ -1,5 +1,6 @@
 @import './app/blocks/includes';
 @import './app/blocks.project/text/text';
+@import './app/blocks.project/button/button';
 @import './app/blocks.project/catalog/catalog';
 @import './app/blocks.project/content/content';
 @import './app/blocks.project/footer/footer';
@@ -26,3 +27,8 @@
 @import './app/blocks.project/lazyYT/lazyYT';
 @import './app/blocks.project/tooltip/tooltip';
 @import './app/blocks.project/section-like/section-like';
+@import './app/blocks.project/basket-item/basket-item';
+@import './app/blocks.project/basket-dashboard/basket-dashboard';
+@import './app/blocks.project/order-table/order-table';
+@import './app/blocks.project/order-form/order-form';
+@import './app/blocks.project/tabs/tabs';

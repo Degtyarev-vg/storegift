@@ -310,4 +310,23 @@
     margin-top: 20px;
   }
 
+  &__basket-item {
+    margin-top: 10px;
+    &:first-of-type {
+      margin-top: 0;
+    }
+  }
+
+  &__basket-dashboard {
+    margin-top: 20px;
+  }
+
+  &__order-form {
+    margin-top: 20px;
+  }
+
+  &__tabs {
+    margin-top: 15px;
+  }
+
 }

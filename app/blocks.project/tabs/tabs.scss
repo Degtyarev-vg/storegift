@@ -1,0 +1,123 @@
+// Для импорта в файл подключения: @import './app/blocks.project/tabs/tabs';
+
+@import '../../scss/vars';     // файл с переменными
+@import '../../scss/png-sprite';    // файл с png-спрайтами
+
+
+.tabs {
+
+  &__nav {
+    font-size: 0;
+    margin: 0 -23px;
+    @include respond-to(lg) {
+      margin: 0 -10px;
+    }
+  }
+  &__item {
+    display: inline-block;
+    padding: 10px 23px;
+    @include respond-to(lg) {
+      padding: 10px 10px;
+    }
+    &_active {
+      .tabs__link {
+        &:before {
+          width: 100%;
+        }
+        &:hover {
+          color: #3b4472;
+        }
+      }
+    }
+  }
+  &__link {
+    display: inline-block;
+    font-family: $officinaserifbookoscregular;
+    font-size: 30px;
+    line-height: 1;
+    text-decoration: none;
+    transition: $transition;
+    position: relative;
+    color: #3b4472;
+    padding-bottom: 11px;
+    @include respond-to(lg) {
+      font-size: 24px;
+      padding-bottom: 7px;
+    }
+    @include respond-to(esmm) {
+      font-size: 20px;
+    }
+    &:before {
+      content: '';
+      background-color: #3b4472;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 4px;
+      transition: $transition;
+      width: 0;
+      @include respond-to(lg) {
+        height: 3px;
+      }
+    }
+    &:hover {
+      color: $accentColor;
+    }
+  }
+
+  &__tab-content {
+    display: none;
+    padding-top: 20px;
+    &:first-of-type {
+      display: block;
+    }
+  }
+
+  .custom-select {
+    max-width: 426px;
+    margin-bottom: 25px;
+    &__drop-button {
+      font-size: 14px;
+      line-height: 1;
+      color: $accentColor;
+      padding: 12px 30px 12px 20px;
+    }
+    &__drop-list {
+      margin: 0;
+    }
+    &__drop-item {
+      &_selected {
+        .custom-select__drop-link {
+          background-color: $accentColor;
+          color: #fff;
+        }
+      }
+      padding-left: 0;
+      margin-bottom: 0;
+      &:before {
+        display: none;
+      }
+    }
+    &__drop-link {
+      font-size: 14px;
+      line-height: 1.2;
+      padding: 15px 20px;
+      color: $accentColor;
+      &:hover {
+        background-color: $accentColor;
+        color: #fff;
+      }
+    }
+  }
+
+  .text {
+    font-size: 14px;
+    p {
+      font-size: 14px;
+    }
+    a {
+      font-size: 14px;
+    }
+  }
+
+}
