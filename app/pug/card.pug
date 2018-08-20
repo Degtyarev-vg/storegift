@@ -40,9 +40,9 @@ html(lang='ru')
                     +e('span').old-price 4 200
                   +e('a')(href='#popup-add-basket').button._addbasket.popup-with-zoom-anim В корзину
                 +e.bottom
-                  +e('a')(href='javascript:undefined').comparison К сравнению
-                  //<a class="availability__comparison availability__comparison_add" href="javascript:undefined">В сравнении</a>
-                  +e('a')(href='javascript:undefined').help Помощь
+                  +e('a')(href='javascript:undefined' data-tooltip='Сравнить товар с другими').comparison.tooltip К сравнению
+                  //<a class="availability__comparison availability__comparison_add tooltip" href="javascript:undefined" data-tooltip="Удалить из сравнения">В сравнении</a>
+                  +e('a')(href='javascript:undefined' data-tooltip='Нажмите чтобы получить помощь').help.tooltip Помощь
 
               +b.availability._false.__availability
                 +e.top
@@ -57,9 +57,9 @@ html(lang='ru')
                     +e('input')(type='text' name='phone').input.mask-phone#phone
                     +e('input')(type='submit' value='Отправить').button._send
                 +e.bottom
-                  +e('a')(href='javascript:undefined').comparison К сравнению
-                  //-+e('a')(href='javascript:undefined').comparison._add В сравнении
-                  +e('a')(href='javascript:undefined').help Помощь
+                  +e('a')(href='javascript:undefined' data-tooltip='Сравнить товар с другими').comparison.tooltip К сравнению
+                  //<a class="availability__comparison availability__comparison_add tooltip" href="javascript:undefined" data-tooltip="Удалить из сравнения">В сравнении</a>
+                  +e('a')(href='javascript:undefined' data-tooltip='Нажмите чтобы получить помощь').help.tooltip Помощь
               ul
                 li <b>Правила ухода:</b> Не требуются.
                 li <b>Сертификация:</b> Товар не подлежит обязательной сертификации.
@@ -87,6 +87,8 @@ html(lang='ru')
             +e.video-container
               h6 Видеообзор:
               +e(data-youtube-id='3d0Ep1Gmbmg' data-parameters="rel=0").video.lazyYT
+
+          +section-like
 
 
     +footer(false, false).__footer

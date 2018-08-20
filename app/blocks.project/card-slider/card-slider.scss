@@ -1,0 +1,116 @@
+// Для импорта в файл подключения: @import './app/blocks.project/card-slider/card-slider';
+
+@import '../../scss/vars';     // файл с переменными
+@import '../../scss/png-sprite';    // файл с png-спрайтами
+
+
+.card-slider {
+  @include respond-to(lg) {
+    margin: 0 auto;
+    max-width: 500px;
+  }
+
+  img {
+    display: none !important;
+  }
+
+  &__slider-container {
+    position: relative;
+    text-align: center;
+    margin-bottom: 28px;
+    padding: 0 50px;
+  }
+
+  &__item {
+    display: inline-block;
+    //height: 366px;
+    //width: 489px;
+    &:before {
+      content: '';
+      display: block;
+      padding-top: 75%;
+      height: 0;
+    }
+  }
+
+  &__navigation {
+
+  }
+  &__prev, &__next {
+    background-color: transparent;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: $transition;
+    cursor: pointer;
+    height: 48px;
+    width: 48px;
+    &:before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      height: 14px;
+      width: 22px;
+      background: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2222%22%20height%3D%2214%22%3E%3Cpath%20d%3D%22M21.734%207.626a.894.878%200%200%200%200-1.25l-6.33-6.12a.94.924%200%200%200-1.298%200%20.885.87%200%200%200%200%201.25l4.77%204.61H.901a.9.885%200%201%200%200%201.77h17.975l-4.77%204.601a.885.87%200%200%200%200%201.25.921.905%200%200%200%201.297%200z%22%20fill%3D%22%23b9b6b2%22%20fill-rule%3D%22evenodd%22%20stroke-width%3D%221.009%22%2F%3E%3C%2Fsvg%3E') center no-repeat;
+      background-size: contain;
+    }
+    &:hover {
+      background-color: #e2e1df;
+      &:before {
+        background: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2222%22%20height%3D%2214%22%3E%3Cpath%20d%3D%22M21.734%207.626a.894.878%200%200%200%200-1.25l-6.33-6.12a.94.924%200%200%200-1.298%200%20.885.87%200%200%200%200%201.25l4.77%204.61H.901a.9.885%200%201%200%200%201.77h17.975l-4.77%204.601a.885.87%200%200%200%200%201.25.921.905%200%200%200%201.297%200z%22%20fill%3D%22%23fff%22%20fill-rule%3D%22evenodd%22%20stroke-width%3D%221.009%22%2F%3E%3C%2Fsvg%3E') center no-repeat;
+        background-size: contain;
+      }
+    }
+  }
+  &__prev {
+    left: 0;
+    transform: translateY(-50%) rotate(180deg);
+  }
+  &__next {
+    right: 0;
+  }
+
+  &__previews-container {
+    text-align: center;
+    margin: 0 -10px;
+    .slick-current {
+      border-color: $accentColor;
+    }
+  }
+
+  &__item-preview {
+    border: 1px solid transparent;
+    display: inline-block;
+    margin: 0 10px;
+    transition: $transition;
+    position: relative;
+    //height: 62px;
+    //width: 80px;
+    &:before {
+      content: '';
+      display: block;
+      padding-top: 75%;
+      height: 0;
+    }
+    &:after {
+      background: transparent;
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      transition: $transition;
+      height: 100%;
+      width: 100%;
+    }
+    &:hover {
+      border-color: transparent;
+      cursor: pointer;
+      &:after {
+        background: rgba(59, 68, 114, .75);
+      }
+    }
+  }
+
+}

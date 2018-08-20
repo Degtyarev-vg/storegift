@@ -1,0 +1,110 @@
+// Для импорта в файл подключения: @import './app/blocks.project/section-like/section-like';
+
+@import '../../scss/vars';     // файл с переменными
+@import '../../scss/png-sprite';    // файл с png-спрайтами
+
+
+.section-like {
+  padding: 10px 0;
+  text-align: center;
+
+  h2 {
+    font-family: $officinaserifboldcregular;
+    font-size: 30px;
+    line-height: 1.4;
+    position: relative;
+    text-align: center;
+    padding-bottom: 14px;
+    margin-bottom: 20px;
+    color: #3b4472;
+    &:before {
+      background-color: #3b4472;
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      height: 5px;
+      width: 39px;
+    }
+  }
+
+  &__slider-container {
+    position: relative;
+  }
+
+  &__slider {
+    margin: 0 -10px;
+    .slick-track {
+      display: flex;
+    }
+    .slick-slide {
+      height: auto;
+    }
+  }
+  &__item {
+    padding: 0 10px;
+  }
+
+  &__product {
+    @include respond-to(esmm) {
+      max-width: 300px;
+      margin: 0 auto;
+    }
+  }
+
+  &__navigation {
+    @include respond-to(stran) {
+      font-size: 0;
+      margin-top: 15px;
+    }
+  }
+  &__prev, &__next {
+    background-color: #f0f0ef;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: $transition;
+    cursor: pointer;
+    height: 48px;
+    width: 48px;
+    @include respond-to(stran) {
+      display: inline-block;
+      position: static;
+      top: 0;
+      transform: translateY(0);
+    }
+    &:before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      height: 14px;
+      width: 22px;
+      background: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2222%22%20height%3D%2214%22%3E%3Cpath%20d%3D%22M21.734%207.626a.894.878%200%200%200%200-1.25l-6.33-6.12a.94.924%200%200%200-1.298%200%20.885.87%200%200%200%200%201.25l4.77%204.61H.901a.9.885%200%201%200%200%201.77h17.975l-4.77%204.601a.885.87%200%200%200%200%201.25.921.905%200%200%200%201.297%200z%22%20fill%3D%22%23fff%22%20fill-rule%3D%22evenodd%22%20stroke-width%3D%221.009%22%2F%3E%3C%2Fsvg%3E') center no-repeat;
+      background-size: contain;
+    }
+    &:hover {
+      background-color: $accentColor;
+    }
+  }
+  &__prev {
+    left: -24px;
+    transform: translateY(-50%) rotate(180deg);
+    @media (max-width: 1600.9px) {
+      left: 0;
+    }
+    @include respond-to(stran) {
+      transform: translateY(0) rotate(180deg);
+      margin-right: 20px;
+    }
+  }
+  &__next {
+    right: -24px;
+    @media (max-width: 1600.9px) {
+      right: 0;
+    }
+  }
+
+}

@@ -1,0 +1,32 @@
+mixin section-like()
+  +b('section').section-like&attributes(attributes)
+    h2 Могут так же понравиться
+    +e.slider-container
+      +e.slider
+        each item in products
+          +e.item
+            +b.product.__product
+              if item.youtube
+                +e('span')(data-tooltip='У товара есть видео').youtube.tooltip
+              +e('a')(href='#').img-container
+                +e('img')(src=item.img alt=item.name).img
+                if item.quantity
+                  +e('span')(data-tooltip='У товара есть дополнительные изображения').quantity.tooltip !{item.quantity}
+              +e.text-container
+                +e('a')(href='#').name !{item.name}
+                if item.size
+                  +e.size !{item.size}
+              +e('a')(href='javascript:undefined' data-tooltip='Сравнить товар с другими').comparison.tooltip К сравнению
+              //<a class="product__comparison product__comparison_add tooltip" href="javascript:undefined" data-tooltip="Удалить из сравнения">В сравнении</a>
+              +e.bottom
+                +e.price-block
+                  +e('span').price !{item.price}
+                  if item.oldPrice
+                    br
+                    +e('span').old-price !{item.oldPrice}
+                +e('a')(href='#popup-add-basket').basket.popup-with-zoom-anim В корзину
+                  +e('span').basket-icon
+              +e('a')(href='#more').overlay
+                +e.overlay-text Подробнее
+
+      +e.navigation

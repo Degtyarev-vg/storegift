@@ -11,3 +11,5 @@
 //= include card-slider/card-slider.js
 //= include mask/mask.js
 //= include lazyYT/lazyYT.js
+//= include tooltip/tooltip.js
+//= include section-like/section-like.js

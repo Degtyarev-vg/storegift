@@ -1,0 +1,50 @@
+// Для импорта в файл подключения: @import './app/blocks.project/section-card/section-card';
+
+@import '../../scss/vars';     // файл с переменными
+@import '../../scss/png-sprite';    // файл с png-спрайтами
+
+
+.section-card {
+  font-size: 0;
+  margin: 0 -10px;
+
+  &__slider-container, &__info-container,
+  &__text-container, &__video-container {
+    display: inline-block;
+    padding: 15px 10px;
+    vertical-align: top;
+    width: 50%;
+    @include respond-to(lg) {
+      display: block;
+      width: 100%;
+    }
+  }
+  &__info-container {
+    h1 {
+      line-height: 1;
+    }
+    p {
+      font-family: $open_sanssemibold;
+      font-size: 16px;
+      color: #b9b6b2;
+    }
+    ul {
+      li {
+        padding-left: 0;
+        margin-bottom: 5px;
+        &:before {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &__availability {
+    margin: 30px 0 50px;
+  }
+
+  &__video {
+    margin-top: 13px;
+  }
+
+}
