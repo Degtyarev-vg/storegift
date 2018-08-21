@@ -1,0 +1,68 @@
+// Для импорта в файл подключения: @import './app/blocks.project/logistics/logistics';
+
+@import '../../scss/vars';     // файл с переменными
+@import '../../scss/png-sprite';    // файл с png-спрайтами
+
+
+.logistics {
+  display: flex;
+  text-decoration: none;
+  @include respond-to(md) {
+    display: block;
+  }
+
+  &__item {
+    border: 2px solid #b9b6b2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-shrink: 1;
+    padding: 20px 55px 20px 20px;
+    position: relative;
+    text-decoration: none;
+    transition: $transition;
+    @include respond-to(md) {
+      width: 100%;
+    }
+    &:hover {
+      border-color: $accentColor;
+    }
+    &:before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      right: 16px;
+      transform: translateY(-50%);
+      height: 14px;
+      width: 22px;
+      background: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2222%22%20height%3D%2214%22%3E%3Cpath%20d%3D%22M21.734%207.626a.894.878%200%200%200%200-1.25l-6.33-6.12a.94.924%200%200%200-1.298%200%20.885.87%200%200%200%200%201.25l4.77%204.61H.901a.9.885%200%201%200%200%201.77h17.975l-4.77%204.601a.885.87%200%200%200%200%201.25.921.905%200%200%200%201.297%200z%22%20fill%3D%22%23b9b6b2%22%20fill-rule%3D%22evenodd%22%20stroke-width%3D%221.009%22%2F%3E%3C%2Fsvg%3E') center no-repeat;
+      background-size: contain;
+    }
+    &:first-of-type {
+      margin-right: 33px;
+      @include respond-to(md) {
+        margin-right: 0;
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  &__img-container {
+    display: inline-block;
+    img {
+      max-width: 155px;
+      @include respond-to(lg) {
+        max-width: 100px;
+      }
+      @include respond-to(esmm) {
+        max-width: 75px;
+      }
+    }
+  }
+
+  &__text {
+    display: inline-block;
+    padding-left: 20px;
+  }
+
+}

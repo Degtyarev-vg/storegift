@@ -1,0 +1,10 @@
+mixin logistics()
+  +b.logistics&attributes(attributes)
+    +e('a')(href='#').item
+      +e('span').img-container
+        img(src='img/cdek-logo.png' alt='CDEK')
+      +e('span').text Пункты выдачи компании СДЭК
+    +e('a')(href='#').item
+      +e('span').img-container
+        img(src='img/glavpunkt-logo.png' alt='ГлавПункт')
+      +e('span').text Пункты выдачи компании ГлавПункт

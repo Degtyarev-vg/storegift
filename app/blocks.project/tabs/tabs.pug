@@ -21,19 +21,105 @@ mixin tabs()
         h2 Санкт-Петербург
         p <b>Срок доставки 1–3 рабочих дней</b>
         p Доставка заказов осуществляется <b>в будние дни с 09.00 до 21.00</b>, с 3-х часовыми интервалами. В выходные дни <b>единый интервал с 09.00 до 18.00</b> без временных интервалов.
-        +b.table TABLE
+
+        +e.responsive-table
+          table(style='width:100%')
+            thead
+              tr
+                th Доставка по:
+                th(colspan='2') Санкт-Петербургу в пределах КАД
+                th(colspan='2') Петергоф, Ломоносов, Кронштадт
+            tbody
+              tr
+                td Сумма заказа:
+                td <b>0 - 5 000 руб.</b>
+                td <b>от 5 000 руб.</b>
+                td <b>0 - 20 000 руб.</b>
+                td <b>от 20 000 руб.</b>
+              tr
+                td Стоимость доставки:
+                td <b>200 руб.</b>
+                td <b>бесплатно</b>
+                td <b>500 руб.</b>
+                td <b>бесплатно</b>
+
         h2 Лен. область
         p <b>Срок доставки 1–5 рабочих дней</b>
         p Доставка заказов осуществляется <b>с 09.00 до 18.00</b> без временных интервалов.
-        +b.table TABLE
+
+        +e.responsive-table
+          table(style='width:100%')
+            thead
+              tr
+                th Доставка по:
+                th(colspan='2') Лен. области <b>в пределах 15 км</b> от КАД
+                th(colspan='2') Лен. области на расстоянии <b>более 15 км</b> от КАД
+            tbody
+              tr
+                td Сумма заказа:
+                td <b>0 - 5 000 руб.</b>
+                td <b>от 5 000 руб.</b>
+                td <b>0 - 5 000 руб.</b>
+                td <b>от 5 000 руб.</b>
+              tr
+                td Стоимость доставки:
+                td <b>600 руб.</b>
+                td <b>400 руб.</b>
+                td <b>600 руб. + 20 рублей </b><br/>за 1 км от КАД
+                td <b>400 руб. + 20 рублей </b><br/>за 1 км от КАД
+
         h2 Срочная доставка по Санкт-Петербургу
-        +b.table TABLE
+
+        table(style='max-width:700px;width:100%')
+          thead
+            tr
+              th Доставка по:
+              th Санкт-Петербургу в пределах КАД
+          tbody
+            tr
+              td Сумма заказа:
+              td <b>от 5 000 руб.</b>
+            tr
+              td Стоимость доставки:
+              td <b>500 руб.</b>
+            tr
+              td Время заказа:
+              td <b><span style="color:#ff0000">Не позднее 15.00 в день заказа</span></b>
+
         h2 Самовывоз
         p(style='color:#ff3f3f') <b>Уважаемые покупатели! При получении товара в пунктах самовывоза ОБЯЗАТЕЛЬНО проверяйте товар на предмет повреждений и брака. Забранный товар обмену и возврату не подлежит.</b>
         br
         p(style='color:#3b4472') Выдача заказов в ПУНКТАХ ВЫДАЧИ  производится <b>через 2–4 рабочих дня после дня заказа товара.</b> Обращаем Ваше внимание, что в <b>пунктах выдачи интернет-заказов выставочного зала и склада нет! </b>
-        +b.logistic LOGISTIC
-        +b.table TABLE
+        +logistics.__logistics
+
+        +e.responsive-table
+          table(style='width:100%')
+            thead
+              tr
+                th Самовывоз из:
+                th(colspan='3') Санкт-Петербурга
+            tbody
+              tr
+                td Сумма заказа:
+                td <b>0 - 2 000 руб.</b>
+                td <b>2 000 - 5 000 руб.</b>
+                td <b>от 5 000 руб.</b>
+              tr
+                td Стоимость доставки:
+                td <b>300 руб.</b>
+                td <b>200 руб.</b>
+                td <b>бесплатно</b>
 
       +e.tab-content#tab2
-        span TWO
+        h2 Content for two tab
+        p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus, repudiandae.
+        p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis cupiditate dignissimos doloremque doloribus fugit quisquam suscipit unde. Animi dolores enim id in incidunt laborum velit!
+        p Lorem ipsum dolor sit amet.
+        ul
+          li Lorem ipsum dolor sit amet.
+          li Lorem ipsum dolor sit amet.
+          li Lorem ipsum dolor sit amet.
+        ol
+          li Lorem ipsum dolor.
+          li Lorem ipsum dolor.
+          li Lorem ipsum dolor.

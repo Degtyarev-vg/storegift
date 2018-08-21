@@ -120,4 +120,60 @@
     }
   }
 
+  &__logistics {
+    margin: 25px 0 20px;
+  }
+
+  &__responsive-table {
+    max-width: 100%;
+    overflow: auto;
+    table {
+      min-width: 400px;
+    }
+  }
+
+  table {
+    border: 1px solid #b9b6b2;
+    margin: 20px 0 30px;
+    width: auto;
+    th, td {
+      border-right: 1px solid #b9b6b2;
+      padding: 15px 20px;
+      vertical-align: middle;
+      @include respond-to(lg) {
+        font-size: 12px;
+        padding: 10px 5px;
+      }
+      &:last-of-type {
+        border-right: 0;
+      }
+    }
+    thead {
+      tr {
+        th {
+          font-weight: normal;
+          text-align: center;
+          &:first-of-type {
+            text-align: left;
+          }
+        }
+      }
+    }
+    tbody {
+      tr {
+        border-top: 1px solid #b9b6b2;
+        transition: $transition;
+        &:hover {
+          background: #f2f2f2;
+        }
+      }
+      td {
+        text-align: center;
+        &:first-of-type {
+          text-align: left;
+        }
+      }
+    }
+  }
+
 }
