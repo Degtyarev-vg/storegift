@@ -1,0 +1,13 @@
+mixin popup-add-basket()
+  +b.popup-add-basket.popup.zoom-anim-dialog.mfp-hide#popup-add-basket&attributes(attributes)
+    +e.inner
+      +e('h4').title Товар добавлен в корзину!
+      +e.info
+        +e.img-container
+          +e('img')(src='img/products/3.jpg' alt='Набор корзин').img
+        +e.info-text
+          +e('p').name Набор корзин для белья с ручками и завязками из 3-х штук
+          +e.price 4 000
+      +e.buttons-container
+        +b('a')(href='#').button._full._arrow-right Оформить заказ
+        +b('a')(href='#').button._border.__button-border.close-popup Продолжить покупки

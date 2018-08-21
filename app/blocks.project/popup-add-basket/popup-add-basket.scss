@@ -1,0 +1,103 @@
+// Для импорта в файл подключения: @import './app/blocks.project/popup-add-basket/popup-add-basket';
+
+@import '../../scss/vars';     // файл с переменными
+@import '../../scss/png-sprite';    // файл с png-спрайтами
+
+
+.popup-add-basket {
+  background-color: #fff;
+  text-align: center;
+  padding: 10px;
+  margin: 0 auto;
+  max-width: 540px;
+  width: 100%;
+
+  &__inner {
+    border: 2px solid $accentColor;
+    padding: 44px 15px 50px;
+    @include respond-to(sm) {
+      padding: 30px 15px;
+    }
+  }
+
+  &__title {
+    font-family: $officinaserifboldcregular;
+    font-size: 30px;
+    line-height: 1.1;
+    color: #3b4472;
+  }
+
+  &__info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    margin: 20px 0;
+    @include respond-to(esmm) {
+      display: block;
+      text-align: center;
+    }
+  }
+  &__img-container {
+    display: inline-block;
+    max-width: 80px;
+    min-width: 80px;
+  }
+  &__info-text {
+    padding-left: 15px;
+    @include respond-to(esmm) {
+      padding-left: 0;
+      margin-top: 15px;
+    }
+  }
+
+  &__name {
+    font-family: $open_sansbold;
+    font-size: 14px;
+    line-height: 1.2;
+    color: #3b4472;
+    margin-bottom: 10px;
+    max-width: 257px;
+    @include respond-to(esmm) {
+      max-width: 100%;
+    }
+  }
+
+  &__price {
+    display: inline-block;
+    font-family: $open_sansbold;
+    font-size: 24px;
+    line-height: 1;
+    color: #494949;
+    position: relative;
+    padding-right: 19px;
+    &:before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
+      height: 18px;
+      width: 15px;
+      background: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20height%3D%2218%22%20width%3D%2215%22%3E%3Cpath%20d%3D%22M14.61%207.13a4.815%204.813%200%200%201-1.13%201.65%205.31%205.308%200%200%201-1.8%201.118%206.662%206.66%200%200%201-2.39.405H5.96v2h2.56v2.955H5.96V18H2.61v-2.746H0v-2.951h2.61v-1.95H0V7.404h2.61V0H9.3a6.661%206.658%200%200%201%202.39.4%205.286%205.284%200%200%201%201.79%201.118%204.812%204.81%200%200%201%201.13%201.643%205.247%205.245%200%200%201%200%203.968zM10.98%203.5a2.586%202.585%200%200%200-1.85-.623H5.96v4.528h3.17a2.637%202.636%200%200%200%201.85-.615%202.141%202.14%200%200%200%20.67-1.635%202.177%202.176%200%200%200-.67-1.656z%22%20fill%3D%22%23494949%22%20fill-rule%3D%22evenodd%22%2F%3E%3C%2Fsvg%3E') center no-repeat;
+      background-size: contain;
+    }
+  }
+
+  &__buttons-container {
+    font-size: 0;
+    .button {
+      @include respond-to(sm) {
+        display: block;
+      }
+    }
+  }
+  &__button-border {
+    margin-left: 20px;
+    @include respond-to(sm) {
+      margin-left: 0;
+      margin-top: 15px;
+    }
+  }
+
+}

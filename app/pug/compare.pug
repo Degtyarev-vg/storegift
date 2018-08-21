@@ -1,0 +1,35 @@
+include ../blocks.project/includes
+
+doctype html
+html(lang='ru')
+  include templates/head/head
+    block head
+      - var pageTitle = 'Сравнение товаров | Store Gift - магазин хороших подарков';
+
+  +page._with-catalog
+
+    +header(false, true).__header
+
+
+    +b.content._with-catalog.__content
+
+      +catalog.__catalog
+
+      +e.inner
+        .grid
+          +b('button').catalog-btn
+            +e('span').text Каталог
+
+          +breadcrumbs(['Главная', 'Сравнение товаров'])
+
+          +b.content-area
+            h1 Сравнение товаров
+
+            +compare
+
+
+    +footer(false, false).__footer
+
+    +quick-panel
+
+    +popup-add-basket

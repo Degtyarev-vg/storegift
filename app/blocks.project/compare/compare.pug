@@ -1,0 +1,61 @@
+mixin compare()
+  +b.compare&attributes(attributes)
+    +e.right RIGHT
+    +e.left LEFT
+    +e.inner
+      +e.top
+        +e.top-item
+          +e.dashboard
+            +e.dashboard-name Категория товара
+            +b.custom-select.__custom-select
+              +e('a')(href='javascript:undefined').drop-button Настенные часы (5)
+              +e('ul').drop-list
+                +e('li').drop-item._selected
+                  +e('a')(href='clock').drop-link Настенные часы (5)
+                +e('li').drop-item
+                  +e('a')(href='same').drop-link Что-то еще (7)
+              +e('input')(type='hidden' name='compare-category' value='clock').drop-hidden-input
+            +e.delete-list-container
+              +e('a')(href='#').delete-list Удалить список
+            +e.dashboard-name Показать:
+            +b.custom-select.__custom-select
+              +e('a')(href='javascript:undefined').drop-button Все параметры
+              +e('ul').drop-list
+                +e('li').drop-item._selected
+                  +e('a')(href='all').drop-link Все параметры
+                +e('li').drop-item
+                  +e('a')(href='same-parametr').drop-link Какой-то параметр
+              +e('input')(type='hidden' name='compare-parameters' value='all').drop-hidden-input
+        each item in productsCompare
+          +e.top-item
+            +b.product.__product
+              if item.youtube
+                +e('span')(data-tooltip='У товара есть видео').youtube.tooltip
+              +e('a')(href='#').img-container
+                +e('img')(src=item.img alt=item.name).img
+                if item.quantity
+                  +e('span')(data-tooltip='У товара есть дополнительные изображения').quantity.tooltip !{item.quantity}
+              +e.text-container
+                +e('a')(href='#').name !{item.name}
+                if item.size
+                  +e.size !{item.size}
+              +e.bottom
+                +e.price-block
+                  +e('span').price !{item.price}
+                +e('a')(href='#popup-add-basket').addbasket.popup-with-zoom-anim В корзину
+              +e('a')(href='#' data-tooltip='Удалить товар из сравнения').delete.tooltip
+              //-+e('a')(href='#more').overlay
+                +e.overlay-text Подробнее
+
+      +e.content
+        each row in productsCompareContent
+          +e.row
+            - let i = 0;
+            each ceil in row.list
+              if i === 0
+                +e.ceil
+                  +e.ceil-inner <b>!{ceil}</b>
+              else
+                +e.ceil
+                  +e.ceil-inner !{ceil}
+              - i++;

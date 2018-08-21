@@ -15,3 +15,5 @@
 //= include section-like/section-like.js
 //= include basket-item/basket-item.js
 //= include tabs/tabs.js
+//= include compare/compare.js
+//= include popup-add-basket/popup-add-basket.js
